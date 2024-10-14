@@ -1,0 +1,75 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Times New Roman', Times;
+    background: url('images/background.webp') no-repeat center center fixed;  
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 150px;
+    font-size: 3em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Center main content */
+    color: white;
+}
+
+footer {
+    background-color: rgb(40, 40, 72);
+    color: rgb(238, 238, 241);
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-left button {
+    margin: 10px 0;
+    padding: 10px 30px;
+    background-color: #eaeeea;
+    color: rgb(40, 40, 72);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 120px; /* Set a width to align the buttons */
+}
+
+.footer-left button:hover {
+    background-color: rgb(226, 226, 234);
+}
+
+.footer-right {
+    max-width: 600px;
+    text-align: left;
+}
+
+.footer-right p {
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 0.9em;
+}
