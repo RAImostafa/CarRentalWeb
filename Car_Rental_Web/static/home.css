@@ -1,0 +1,112 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('images/background.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #282848; /* Matches your header background color */
+    padding: 15px;
+    color: white;
+    position: relative;
+}
+
+.welcome-area {
+    text-align: center;
+}
+
+#welcome-message {
+    margin: 0;
+    font-size:2em;
+}
+
+.datetime {
+    font-size: 1.25em;
+    color: lightgray;
+}
+
+.profile-container {
+    position: absolute;
+    right: 100px; /*how much right far */
+}
+
+.profile-icon {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.booked-flag {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+
+.container {
+    padding: 20px;
+    color: white;
+}
+
+.rentals-section {
+    margin: 20px 0;
+}
+
+.rentals-section h2 {
+    color: rgb(40, 40, 72);
+    font-family: Arial, sans-serif;
+    text-align: left;
+    font-size: 1.2em;
+    background-color: rgba(255, 255, 255, 0.8);
+border-radius: 10px;
+margin: 10px;
+padding: 20px;
+}
+
+.car-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.car {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: left;
+    color: rgb(40, 40, 72);
+    transition: transform 0.2s;
+}
+
+.car:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.car img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.car h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+.car p {
+    margin: 5px 0;
+}
