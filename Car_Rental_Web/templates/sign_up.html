@@ -24,8 +24,10 @@
             <input type="password" name="password" placeholder="Password" required>
             <button type="submit">Sign Up</button>
         </form>
-        <a href="/" style="color: rgb(241, 238, 238);">Back to Home</a>
-        <p id="validation-message" style="color: red;">$$validation_message$$</p> <!-- Placeholder for validation message -->
+        <a href="/" class="highlight-link">Back to Home</a>
+        <!-- Display message using Jinja syntax -->
+        <p style="color: red;">{{ message }}</p>
+
     </div>
 </body>
 </html>

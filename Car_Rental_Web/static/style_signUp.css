@@ -46,7 +46,7 @@ input {
 button {
     padding: 10px 20px;
     background-color: #d8e0d9;
-    color:rgb(40, 40, 72);
+    color:#282848;;
     border: none;
     cursor: pointer;
     font-size: 16px;
@@ -60,11 +60,20 @@ button:hover {
 }
 
 a {
-    color: rgb(40, 40, 72);
+    color: 282848;
     margin-top: 15px;
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+.highlight-link {
+    color: rgb(241, 238, 238); /* Text color */
+    font-size: 24px; /* Font size */
+    text-decoration: underline; /* Underline */
+    background-color: rgba(40, 40, 72, 0.5); /* Highlight background color */
+    padding: 5px; /* Optional: Adds some space around the text */
+    border-radius: 3px; /* Optional: Rounds the corners of the background */
 }

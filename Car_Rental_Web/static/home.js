@@ -18,14 +18,6 @@ function updateDateTime() {
     dateTimeElement.textContent = now.toLocaleDateString('en-US', options);
 }
 
-setInterval(updateDateTime, 1000); // Update every second
-
-// Initial call to display the current date and time immediately
-updateDateTime();
-
-
-
-
 // Function to load cars from cars.txt
 async function loadCars() {
     try {
@@ -40,7 +32,8 @@ async function loadCars() {
         
         lines.forEach(line => {
             console.log("Processing line:", line); // Debugging line
-            const [image, name, type, seats, doors, baggage, transmission, mileage, location, price, availability, owner, phone] = line.split('|');
+            const [image, name, type, seats, doors, baggage, transmission, mileage, location, price, 
+                availability, owner, phone] = line.split('|');
             
             if (!availability) {
                 console.error("Error: Availability is undefined for line:", line);
@@ -75,10 +68,56 @@ async function loadCars() {
     }
 }
 
+setInterval(updateDateTime, 1000); // Update every second
+// Initial call to display the current date and time immediately
+updateDateTime();
 
-// Run functions on page load
-window.onload = () => {
-    updateDateTime();
-    setInterval(updateDateTime, 1000); // Update every second
-    loadCars();
-};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

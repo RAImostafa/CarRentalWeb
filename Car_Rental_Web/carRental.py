@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session,jsonify
+import datetime
 import json
 
 app = Flask(__name__)
@@ -6,13 +7,16 @@ app.secret_key = 'supersecretkey'
 
 # Define the User class
 class User:
-    def __init__(self, first_name, last_name, email, phone, government, password):
+    def __init__(self, email, password, role="user", first_name=None, last_name=None, phone=None, government=None):
+        self.email = email
+        self.password = password
+        self.role = role
         self.first_name = first_name
         self.last_name = last_name
-        self.email = email
         self.phone = phone
         self.government = government
-        self.password = password
+
+    # Save, load, and other methods remain unchanged
 
     def save_to_file(self):
         try:
@@ -41,12 +45,7 @@ class User:
         except FileNotFoundError:
             users = []
         return users
-
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
+    
 @app.route('/sign_up', methods=['GET', 'POST'])
 def sign_up():
     message = ""
@@ -74,9 +73,10 @@ def sign_up():
                 new_user = User(first_name, last_name, email, phone, government, password)
                 new_user.save_to_file()
                 session['user_id'] = email
-                return redirect(url_for('index'))
+                return redirect(url_for('home'))
 
-    return render_template('sign_up.html', validation_message=message)
+    return render_template('sign_up.html', message=message)
+
 
 @app.route('/sign_in', methods=['GET', 'POST'])
 def sign_in():
@@ -88,12 +88,92 @@ def sign_in():
         for user in users:
             if user['email'] == email and user['password'] == password:
                 session['user_id'] = email
-                return redirect(url_for('index'))
+                
+                # Check if the user has a role and it's 'admin'
+                if user.get('role') == 'admin':
+                    # Store a special message for the admin
+                    first_name = "Admin"
+                    role = 'admin_page'
+                else:
+                    # Otherwise, use the user's first name and normal role
+                    first_name = user['first_name']
+                    role = 'home'
+                
+                # Redirect with JavaScript and store first_name in localStorage
+                return f'''
+                <script>
+                localStorage.setItem('first_name', '{first_name}');
+                window.location.href = "/{role}";
+                </script>
+                '''
+        
         message = "Invalid email or password"
     return render_template('sign_in.html', message=message)
 
 
+class Car:
+    def __init__(self, image, model, type, capacity, doors, luggage, transmission, mileage, location, price, duration, owner, phone, plate_number):
+        self.image = image
+        self.model = model
+        self.type = type
+        self.capacity = capacity
+        self.doors = doors
+        self.luggage = luggage
+        self.transmission = transmission
+        self.mileage = mileage
+        self.location = location
+        self.price = price
+        self.duration = duration
+        self.owner = owner
+        self.phone = phone
+        self.plate_number = plate_number
+
+    @staticmethod
+    def get_cars():
+        with open("cars.txt") as file:
+            content = file.read()
+        car_data = [tuple(line.split("|")) for line in content.strip().split("\n") if line]
+        cars = [Car(*data) for data in car_data]
+        return cars
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
+@app.route('/home')
+def home():
+    welcome_message = ""
+    if 'user_id' in session:
+        email = session['user_id']
+        users = User.get_list()
+        for user in users:
+            if user['email'] == email:
+                welcome_message = f"Welcome back, {user['first_name']}!"
+    current_datetime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    cars = Car.get_cars()
+    
+    try:
+        with open("booked_cars.json", "r") as file:
+            bookings = json.load(file)
+            booked_models = {booking['car']['model']: booking['car'] for booking in bookings}
+    except FileNotFoundError:
+        booked_models = {}
+
+    for car in cars:
+        if car.model in booked_models:
+            car.status = booked_models[car.model].get('status')
+
+    return render_template('Home.html', welcome_message=welcome_message, current_datetime=current_datetime, cars=cars)
+
+
+@app.route('/car/<car_model>')
+def car(car_model):
+    cars = Car.get_cars()
+    selected_car = next((car for car in cars if car.model == car_model), None)
+    if not selected_car:
+        return "Car not found", 404
+
+    return render_template('car_page.html', car=selected_car)
