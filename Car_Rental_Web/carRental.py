@@ -45,7 +45,7 @@ class User:
         except FileNotFoundError:
             users = []
         return users
-    
+
 @app.route('/sign_up', methods=['GET', 'POST'])
 def sign_up():
     message = ""
@@ -57,8 +57,18 @@ def sign_up():
         government = request.form['government']
         password = request.form['password']
 
-        # Validate email and password
         email = email.lower().strip()
+        
+        # Debugging: Print all received data
+        print({
+            "first_name": first_name,
+            "last_name": last_name,
+            "email": email,
+            "phone": phone,
+            "government": government,
+            "password": password
+        })
+
         if not email.endswith('.com'):
             message = "Email must end with '.com'"
         elif len(password) < 8 or ',' in password or not any(char.isalpha() for char in password):
@@ -70,13 +80,12 @@ def sign_up():
                     message = "Email already exists"
                     break
             else:
-                new_user = User(first_name, last_name, email, phone, government, password)
+                new_user = User(first_name, last_name, email, phone, government, password, role="user")
                 new_user.save_to_file()
                 session['user_id'] = email
+                print("User added successfully!")  # Debug statement
                 return redirect(url_for('home'))
-
     return render_template('sign_up.html', message=message)
-
 
 @app.route('/sign_in', methods=['GET', 'POST'])
 def sign_in():
