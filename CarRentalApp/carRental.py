@@ -151,9 +151,8 @@ def sign_out():
     return redirect(url_for('index'))
 
 # ************************************** CAR CLASS FUNS  *********************************
-
 class Car:
-    def __init__(self, image, model, type, capacity, doors, luggage, transmission, mileage, location, price, duration, owner, phone, plate_number):
+    def __init__(self, image, model, type, capacity, doors, luggage, transmission, mileage, location, price, duration, owner, phone, plate_number, start_date, end_date):
         self.image = image
         self.model = model
         self.type = type
@@ -168,6 +167,9 @@ class Car:
         self.owner = owner
         self.phone = phone
         self.plate_number = plate_number
+        self.start_date = start_date
+        self.end_date = end_date
+
 
     @staticmethod
     def get_cars():
