@@ -1,19 +1,26 @@
 [
     {
+        "email": "admin@example.com",
+        "password": "adminpassword",
+        "role": "admin"
+    },
+    {
         "first_name": "John",
         "last_name": "Doe",
         "email": "john.doe@example.com",
         "phone": "123456789",
-        "government": "Some Government",
-        "password": "password123"
+        "government": "Maadi",
+        "password": "password123",
+        "role": "user"
     },
     {
         "first_name": "Jane",
         "last_name": "Smith",
         "email": "jane.smith@example.com",
         "phone": "987654321",
-        "government": "Another Government",
-        "password": "password456"
+        "government": "Cairo",
+        "password": "password456",
+        "role": "user"
     },
     {
         "first_name": "rania",
@@ -21,7 +28,8 @@
         "email": "rania.mustafa3000@gmail.com",
         "phone": "01150125119",
         "government": "Maadi",
-        "password": "AS123456789"
+        "password": "AS123456789",
+        "role": "user"
     },
     {
         "first_name": "mahmoud",
@@ -29,6 +37,16 @@
         "email": "mahmoud.mohamed@gmail.com",
         "phone": "011259963714",
         "government": "Tahrir Sqaure",
-        "password": "123456789ASD"
+        "password": "123456789ASD",
+        "role": "user"
+    },
+    {
+        "first_name": "sara",
+        "last_name": "salah",
+        "email": "sara_salah895@gmail.com",
+        "phone": "01150125119",
+        "government": "helwan",
+        "password": "123456789aa",
+        "role": "user"
     }
 ]

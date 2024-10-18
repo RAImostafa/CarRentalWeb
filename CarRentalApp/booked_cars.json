@@ -1,0 +1,30 @@
+[
+    {
+        "user": {
+            "first_name": "Jane",
+            "last_name": "Smith",
+            "email": "jane.smith@example.com",
+            "phone": "987654321",
+            "government": "Cairo",
+            "password": "password456",
+            "role": "user"
+        },
+        "car": {
+            "image": "images/Peugeot-3008.jpg",
+            "model": "Peugeot 2020",
+            "type": "Standard",
+            "capacity": "6",
+            "doors": "4",
+            "luggage": "6",
+            "transmission": "Automatic",
+            "mileage": "Unlimited",
+            "location": "6 october",
+            "price": "900000 EGP",
+            "duration": "month",
+            "owner": "sara salah",
+            "phone": "01150147896",
+            "plate_number": "1235",
+            "status": "booked"
+        }
+    }
+]

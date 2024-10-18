@@ -1,0 +1,153 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background: url('images/What people say.svg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #282848;
+    padding: 15px;
+    color: white;
+    position: relative;
+}
+
+.profile-title {
+    flex: 1;
+    font-size: 2em;
+    text-align: center;
+}
+
+.icon-container {
+    position: absolute;
+    right: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-container a {
+    margin-left: 10px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.user-info, .booked-cars {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.user_Info_cars {
+    background-color: #E1EFFF;
+    color: #007BFF;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.car-listings {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.car {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.car:hover {
+    transform: scale(1.05);
+}
+
+.car img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #282848;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+    color: #E1EFFF;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+    }
+    .car {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .car {
+        width: 100%;
+    }
+}
+
+.cancel-booking-button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cancel-booking-button:hover {
+    background-color: #ff1a1a;
+}

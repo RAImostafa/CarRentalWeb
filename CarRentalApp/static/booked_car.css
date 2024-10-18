@@ -1,0 +1,114 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #282848;
+    color: white;
+    font-size: 2em;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+/* Table Header Styling */
+thead th {
+    background-color: #282848;
+    color: #ffffff;
+    padding: 10px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+/* Table Row and Cell Styling */
+.container th, .container td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.container td:first-child {
+    width: 20%; /* Set a wider width for user info */
+}
+
+/* User Info Styling */
+.user-info {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f9fa; /* Light background */
+    border: 1px solid #ddd;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.user-info p {
+    margin: 5px 0;
+}
+
+/* Car Image Styling */
+td img {
+    border-radius: 4px;
+}
+
+/* Remove Button Styling */
+.remove-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: darkred;
+}
+
+/* Highlight Link Styling */
+.highlight-link {
+    color: #282848;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.highlight-link:hover {
+    color: #5757a1;
+}
+
+/* Highlighted Owner Details */
+.highlight-owner, .highlight-owner-phone {
+    color: #333;
+    background-color: rgb(255,255,0);
+    border-radius: 5px;
+    list-style-type: disc; /* Ensure bullet points */
+    display: list-item; /* Retain list-style for bullets */
+  
+}
