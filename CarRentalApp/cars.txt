@@ -1,10 +1,11 @@
 images/chevrolet_aveo.jpg|Chevrolet Aveo|Economy|5|4|2|Automatic|Limited|7 El-Nozha|4798.01 EGP|week|Ahmed Mahmoud|01012345678|1234|2024-10-20|2024-10-27
 images/toyota_corolla.webp|Toyota Corolla|Standard|5|4|2|Automatic|Unlimited|Abbasia|5500.00 EGP|week|Mariam Ahmed|01098765432|5678|2024-10-20|2024-10-27
-images/honda_civic.png|Honda Civic|Premium|5|4|3|Automatic|Unlimited|3 Tahrir Square|6000.75 EGP|month|Sara Mostafa|01234567890|1213|2024-11-01|2024-12-01
+images/honda_civic.png|Honda Civic|Standard|5|4|3|Automatic|Unlimited|3 Tahrir Square|6000.75 EGP|month|Sara Mostafa|01234567890|1213|2024-11-01|2024-12-01
 images/bmw_3series.jpg|BMW 3 Series|Luxury|5|4|3|Automatic|Unlimited|40 Zamalek|12000.00 EGP|month|Omar El-Shenawy|01098761234|1415|2024-11-01|2024-12-01
 images/Kia Sportage.avif|Kia Sportage|SUV|5|4|4|Automatic|Unlimited|60 Maadi|8000.00 EGP|week|Nada Ibrahim|01123456789|1617|2024-10-20|2024-10-27
 images/Hyundai Elantra.webp|Hyundai Elantra|Standard|5|4|2|Automatic|Limited|New Cairo|5100.00 EGP|2 weeks|Hassan Ali|01298765432|1819|2024-10-20|2024-11-03
 images/ford_focus.jpg|Ford Focus|Economy|5|4|2|Manual|Limited|Giza|4600.00 EGP|week|Amal Khaled|01087654321|2021|2024-10-20|2024-10-27
-images/GMC2017.jpg|GMC 2017|SUV|7|5|4|Automatic|Unlimited|Nozha|20000|week|Rania Mostafa|01150147789|2223|2024-10-20|2024-10-27
-images/Peugeot-3008.jpg|Peugeot 2020|Standard|6|4|6|Automatic|Unlimited|6 october|900000 EGP|month|sara salah|01150147896|1235|2024-11-01|2024-12-01
-images/mercedes-c-class-2015-hero.jpg|mercedes 2015|standard|5|4|1|Automatic|Unlimited|Maadi|100000 EGP|month|Rania Mostafa|789654123|1245|2024-11-01|2024-12-01
+images/GMC2017.jpg|GMC 2017|SUV|7|5|4|Automatic|Unlimited|Nozha|20000 EGP|week|Rania Mostafa|01150147789|2223|2024-10-20|2024-10-27
+images/Peugeot-3008.jpg|Peugeot 2020|SUV|6|4|6|Automatic|Unlimited|6 October|900000 EGP|month|Sara Salah|01150147896|1235|2024-11-01|2024-12-01
+images/mercedes-c-class-2015-hero.jpg|Mercedes 2015|Luxury|5|4|1|Automatic|Unlimited|Maadi|100000 EGP|month|Rania Mostafa|789654123|1245|2024-11-01|2024-12-01
+

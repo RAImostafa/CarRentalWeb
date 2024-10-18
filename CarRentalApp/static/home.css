@@ -10,7 +10,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #282848; /* Matches your header background color */
+    background-color: #282848;
     padding: 15px;
     color: white;
     position: relative;
@@ -22,7 +22,7 @@ body, html {
 
 #welcome-message {
     margin: 0;
-    font-size:2em;
+    font-size: 2em;
 }
 
 .datetime {
@@ -32,11 +32,11 @@ body, html {
 
 .profile-container {
     position: absolute;
-    right: 100px; /*how much right far */
+    right: 100px;
 }
 
 .profile-icon {
-    width: 40px; /* Adjust size as needed */
+    width: 40px;
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
@@ -53,64 +53,263 @@ body, html {
     margin-top: 5px;
 }
 
+/*.container {
+/*    padding: 20px;
+/*    color: white;
+/*}
+/*
+/*.rentals-section {
+/*    margin: 20px 0;
+/*}
+/*
+/*.rentals-section h2 {
+/*    display: inline-block;
+/*    background-color: #E1EFFF;
+/*    color: #007BFF;
+/*    padding: 5px 15px;
+/*    border-radius: 20px;
+/*    font-size: 1.5em;
+/*    font-weight: bold;
+/*    text-align: center;
+/*    margin-bottom: 10px;
+/*}
+/*
+/*.car-listings {
+/*    display: flex;
+/*    flex-wrap: wrap;
+/*    justify-content: left;
+/*}
+/*
+/*.car {
+/*    background-color: rgba(255, 255, 255, 0.8);
+/*    border-radius: 10px;
+/*    margin: 10px;
+/*    padding: 20px;
+/*    width: 250px; /* Fixed width */
+/*    text-align: left;
+/*    color: rgb(40, 40, 72);
+/*    transition: transform 0.2s;
+/*}
+/*
+/*.car:hover {
+/*    transform: scale(1.05);
+/*    background-color: #E1EFFF;
+/*    cursor: pointer;
+/*}
+/*
+/*.car img {
+/*    width: 100%; /* Fixed size */
+/*    max-height: 150px;
+/*    display: block;
+/*    margin: 0 auto 10px; /* Center the image */
+/*    border-radius: 10px;
+/*}
+/*
+/*.car h3 {
+/*    margin: 10px 0 5px;
+/*    font-size: 1.2em;
+/*    text-decoration: none; /* No underline */
+/*}
+/*
+/*.car p {
+/*    margin: 5px 0;
+/*    text-decoration: none; /* No underline */
+/*}
+/*
+/*.price {
+/*    color: #007BFF; /* Price color */
+/*}
+/*
+/*.footer {
+/*    background-color: #282848;
+/*    text-align: center;
+/*    padding: 10px;
+/*    font-size: 1.2em;
+/*    color: #E1EFFF;
+/*}
 
+/* Overall container styling */
+/* Overall container styling */
 .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Car card styling */
+.car-card {
+    width: 250px;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on car card */
+.car-card:hover {
+    transform: scale(1.05);  /* Slightly enlarges the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Adds a stronger shadow */
+}
+
+/* Image container */
+.car-image-container {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Car details */
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Price styling */
+.price {
+    font-size: 18px;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Booked flag */
+.booked-flag {
+    background-color: red;
     color: white;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 12px;
 }
 
-.rentals-section {
-    margin: 20px 0;
-}
-
-.rentals-section h2 {
-   
-        display: inline-block;
-        background-color: #E1EFFF;
-        color: #007BFF;
-        padding: 5px 15px;
-        border-radius: 20px;
-        font-size: 1.5em;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 10px;
-    
-}
-
+/* Flexbox layout for car listings */
 .car-listings {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
+    gap: 20px;
 }
 
-.car {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    margin: 10px;
-    padding: 20px;
-    width: 200px;
-    text-align: left;
-    color: rgb(40, 40, 72);
-    transition: transform 0.2s;
+/* Utility for links around cards */
+.car-link {
+    text-decoration: none;
+    color: inherit;
 }
 
-.car:hover {
-    transform: scale(1.05);
-    background-color: #E1EFFF;
-    cursor: pointer;
+.car-link:hover h3 {
+    text-decoration: underline;
 }
 
-.car img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.car h3 {
-    margin: 10px 0 5px;
+/* Footer styling */
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px;
     font-size: 1.2em;
+    color:  #282848;
 }
 
-.car p {
-    margin: 5px 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

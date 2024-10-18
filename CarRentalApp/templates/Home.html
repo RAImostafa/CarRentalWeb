@@ -25,12 +25,14 @@
             <h2>Monthly Rentals</h2>
             <div class="car-listings">
                 {% for car in cars if car.duration == 'month' %}
-                <a href="/car/{{ car.model }}">
-                    <div class="car">
-                        <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.model }}">
+                <a href="/car/{{ car.model }}" class="car-link">
+                    <div class="car-card">
+                        <div class="car-image-container">
+                            <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.model }}" class="car-image">
+                        </div>
                         <h3>{{ car.model }}</h3>
                         <p>Location: {{ car.location }}</p>
-                        <p>Price: {{ car.price }}</p>
+                        <p>Price: <span class="price">{{ car.price }}</span></p>
                         <p><strong>Available from: {{ car.start_date }} to {{ car.end_date }}</strong></p>
                         {% if car.status == 'booked' %}
                         <span class="booked-flag">Booked</span>
@@ -45,12 +47,14 @@
             <h2>Two-Week Rentals</h2>
             <div class="car-listings">
                 {% for car in cars if car.duration == '2 weeks' %}
-                <a href="/car/{{ car.model }}">
-                    <div class="car">
-                        <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.model }}">
+                <a href="/car/{{ car.model }}" class="car-link">
+                    <div class="car-card">
+                        <div class="car-image-container">
+                            <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.model }}" class="car-image">
+                        </div>
                         <h3>{{ car.model }}</h3>
                         <p>Location: {{ car.location }}</p>
-                        <p>Price: {{ car.price }}</p>
+                        <p>Price: <span class="price">{{ car.price }}</span></p>
                         <p><strong>Available from: {{ car.start_date }} to {{ car.end_date }}</strong></p>
                         {% if car.status == 'booked' %}
                         <span class="booked-flag">Booked</span>
@@ -65,12 +69,14 @@
             <h2>Weekly Rentals</h2>
             <div class="car-listings">
                 {% for car in cars if car.duration == 'week' %}
-                <a href="/car/{{ car.model }}">
-                    <div class="car">
-                        <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.model }}">
+                <a href="/car/{{ car.model }}" class="car-link">
+                    <div class="car-card">
+                        <div class="car-image-container">
+                            <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.model }}" class="car-image">
+                        </div>
                         <h3>{{ car.model }}</h3>
                         <p>Location: {{ car.location }}</p>
-                        <p>Price: {{ car.price }}</p>
+                        <p>Price: <span class="price">{{ car.price }}</span></p>
                         <p><strong>Available from: {{ car.start_date }} to {{ car.end_date }}</strong></p>
                         {% if car.status == 'booked' %}
                         <span class="booked-flag">Booked</span>
@@ -81,7 +87,7 @@
             </div>
         </section>
     </div>
-    <footer style="background-color: yellow; text-align: center; padding: 10px; font-size: 1.2em; color: black;">
+    <footer class="footer">
         <marquee behavior="scroll" direction="left">
             Contact us for any problem: <strong>(+20) 1150125119</strong>
         </marquee>
