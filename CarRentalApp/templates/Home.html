@@ -19,7 +19,6 @@
             </a>
         </div>
     </header>
-    
     <div class="container">
         <!-- Monthly Rentals Section -->
         <section class="rentals-section" id="monthly-rentals">
@@ -32,6 +31,7 @@
                         <h3>{{ car.model }}</h3>
                         <p>Location: {{ car.location }}</p>
                         <p>Price: {{ car.price }}</p>
+                        <p><strong>Available from: {{ car.start_date }} to {{ car.end_date }}</strong></p>
                         {% if car.status == 'booked' %}
                         <span class="booked-flag">Booked</span>
                         {% endif %}
@@ -40,7 +40,6 @@
                 {% endfor %}
             </div>
         </section>
-
         <!-- Two-Week Rentals Section -->
         <section class="rentals-section" id="two-week-rentals">
             <h2>Two-Week Rentals</h2>
@@ -52,6 +51,7 @@
                         <h3>{{ car.model }}</h3>
                         <p>Location: {{ car.location }}</p>
                         <p>Price: {{ car.price }}</p>
+                        <p><strong>Available from: {{ car.start_date }} to {{ car.end_date }}</strong></p>
                         {% if car.status == 'booked' %}
                         <span class="booked-flag">Booked</span>
                         {% endif %}
@@ -60,7 +60,6 @@
                 {% endfor %}
             </div>
         </section>
-
         <!-- Weekly Rentals Section -->
         <section class="rentals-section" id="weekly-rentals">
             <h2>Weekly Rentals</h2>
@@ -72,6 +71,7 @@
                         <h3>{{ car.model }}</h3>
                         <p>Location: {{ car.location }}</p>
                         <p>Price: {{ car.price }}</p>
+                        <p><strong>Available from: {{ car.start_date }} to {{ car.end_date }}</strong></p>
                         {% if car.status == 'booked' %}
                         <span class="booked-flag">Booked</span>
                         {% endif %}
@@ -81,8 +81,7 @@
             </div>
         </section>
     </div>
-    
-    <footer style="background-color: #282848; text-align: center; padding: 10px; font-size: 1.2em; color: #E1EFFF;">
+    <footer style="background-color: yellow; text-align: center; padding: 10px; font-size: 1.2em; color: black;">
         <marquee behavior="scroll" direction="left">
             Contact us for any problem: <strong>(+20) 1150125119</strong>
         </marquee>
