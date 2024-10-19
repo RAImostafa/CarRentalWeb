@@ -74,8 +74,19 @@ updateDateTime();
 
 
 
+function searchCars() {
+    let input = document.getElementById('carSearch').value.toLowerCase();
+    let carCards = document.getElementsByClassName('car-card');
 
-
+    for (let i = 0; i < carCards.length; i++) {
+        let model = carCards[i].querySelector('h3').innerText.toLowerCase();
+        if (model.includes(input)) {
+            carCards[i].style.display = ''; // Show the card
+        } else {
+            carCards[i].style.display = 'none'; // Hide the card
+        }
+    }
+}
 
 
 

@@ -116,12 +116,13 @@ body {
 }
 
 .footer {
-    background-color: #282848;
+    background-color: #f8f9fa;
     text-align: center;
     padding: 10px;
     font-size: 1.2em;
-    color: #E1EFFF;
+    color:  #282848;
 }
+
 
 @media (max-width: 768px) {
     .profile-container {

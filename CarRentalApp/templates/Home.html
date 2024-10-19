@@ -13,10 +13,15 @@
                 <h1 id="welcome-message">{{ welcome_message }}</h1>
                 <p id="datetime" class="datetime">{{ current_datetime }}</p>
             </div>
+                        <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="carSearch" placeholder="Search for cars by model..." onkeyup="searchCars()">
+            </div>
             <!-- User Profile Icon -->
-            <a href="{{ url_for('profile') }}" title="User Profile" class="profile-container">
-                <img src="{{ url_for('static', filename='images/profileIcon.jpeg') }}" alt="Profile Icon" class="profile-icon">
+            <a href="{{ url_for('profile') }}" title="User Profile" class="profile-link">
+                <img src="{{ url_for('static', filename='images/profileIcon.jpeg') }}" alt="Profile Icon" class="profile-image">
             </a>
+            
         </div>
     </header>
     <div class="container">
