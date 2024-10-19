@@ -152,7 +152,7 @@ def sign_out():
 
 # ************************************** CAR CLASS FUNS  *********************************
 class Car:
-    def __init__(self, image, model, type, capacity, doors, luggage, transmission, mileage, location, price, duration, owner, phone, plate_number, start_date, end_date):
+    def __init__(self, image, model, type, capacity, doors, luggage, transmission, mileage, location, price, duration, owner, phone, plate_number):
         self.image = image
         self.model = model
         self.type = type
@@ -167,8 +167,6 @@ class Car:
         self.owner = owner
         self.phone = phone
         self.plate_number = plate_number
-        self.start_date = start_date
-        self.end_date = end_date
 
 
     @staticmethod
@@ -178,6 +176,12 @@ class Car:
         car_data = [tuple(line.split("|")) for line in content.strip().split("\n") if line]
         cars = [Car(*data) for data in car_data]
         return cars
+    
+    @staticmethod
+    def get_booked_cars():
+        with open('booked_cars.json', 'r') as f:
+            booked_cars = json.load(f)
+        return booked_cars
 
 
 
@@ -194,7 +198,9 @@ def home():
         users = User.get_list()
         for user in users:
             if user['email'] == email:
-                welcome_message = f"Welcome back, {user['first_name']}!"
+                #welcome_message = f"Welcome back, {user['first_name']}!"
+                welcome_message = f"Welcome back, {user.get('first_name', 'User')}!"
+
     current_datetime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     cars = Car.get_cars()
     
@@ -210,6 +216,20 @@ def home():
             car.status = booked_models[car.model].get('status')
 
     return render_template('Home.html', welcome_message=welcome_message, current_datetime=current_datetime, cars=cars)
+
+
+@app.route('/get_cars')
+def get_cars():
+    filter_type = request.args.get('filter', 'all')
+    cars = Car.get_cars()  # Fetch all cars
+    booked_cars = Car.get_booked_cars()  # Fetch booked cars from booked_cars.json
+
+    if filter_type == 'available':
+        # Filter out booked cars
+        available_cars = [car for car in cars if car['plate_number'] not in [booked_car['car']['plate_number'] for booked_car in booked_cars]]
+        return jsonify(available_cars)
+    else:
+        return jsonify(cars)
 
 
 @app.route('/car/<car_model>')

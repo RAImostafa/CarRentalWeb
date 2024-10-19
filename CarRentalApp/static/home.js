@@ -90,9 +90,24 @@ function searchCars() {
 
 
 
+let showAvailableCars = false;
 
+function toggleFilter() {
+    // Get the filter toggle image and label
+    const filterToggle = document.getElementById('filterToggle');
+    const filterLabel = document.getElementById('filterLabel');
 
+    // Toggle the filter state
+    showAvailableCars = !showAvailableCars;
 
+    // Filter the car cards based on the state
+    const carCards = document.querySelectorAll('.car-card');
+
+    carCards.forEach(card => {
+        const isBooked = card.querySelector('.booked-flag') !== null;
+        card.style.display = showAvailableCars && isBooked ? 'none' : 'block'; // Show or hide based on filter state
+    });
+}
 
 
 
