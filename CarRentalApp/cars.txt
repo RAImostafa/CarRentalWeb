@@ -1,0 +1,15 @@
+images/chevrolet_aveo.jpg|Chevrolet Aveo|Economy|5|4|2|Automatic|7 El-Nozha|4798.01 |week|Ahmed Mahmoud|01012345678|1234
+images/toyota_corolla.webp|Toyota Corolla|Standard|5|4|2|Automatic|Abbasia|5500.00 |week|Mariam Ahmed|01098765432|5678
+images/honda_civic.png|Honda Civic|Standard|5|4|3|Automatic|3 Tahrir Square|6000.75 |month|Sara Mostafa|01234567890|1213
+images/bmw_3series.jpg|BMW 3 Series|Luxury|5|4|3|Automatic|40 Zamalek|12000.00 |month|Omar El-Shenawy|01098761234|1415
+images/Kia Sportage.avif|Kia Sportage|SUV|5|4|4|Automatic|60 Maadi|8000.00 |week|Nada Ibrahim|01123456789|1617
+images/Hyundai Elantra.webp|Hyundai Elantra|Standard|5|4|2|Automatic|New Cairo|5100.00 |2 weeks|Hassan Ali|01298765432|1819
+images/ford_focus.jpg|Ford Focus|Economy|5|4|2|Manual|Giza|4600.00 |week|Amal Khaled|01087654321|2021
+images/GMC2017.jpg|GMC 2017|SUV|7|5|4|Automatic|Nozha|20000 |week|Rania Mostafa|01150147789|2223
+images/Peugeot-3008.jpg|Peugeot 2020|SUV|6|4|6|Automatic|6 October|900000 |month|Sara Salah|01150147896|1235
+images/mercedes-c-class-2015-hero.jpg|mercedes 2015|standard |5|4|1|Automatic|Maadi|100000 EGP|month|Rania Mostafa|789654123|1245
+images/nissan_sentra_2019.jpg|Nissan Sentra|Sedan|5|4|3|Automatic|Al haram |10000 EGP|2 weeks|Esraa magdy |0145778962|1110
+images/Nissan_Ariya_Electric_2023.jpg|Nissan Ariya 2023|SUV|5|4|4|Automatic|Faisal|15000 EGP|2 weeks|Esraa magdy |0145778962|110
+images/copra2002.jpg|Acura CL|Coupe|4|4|2|Automatic|Faisal|15000 EGP|2 weeks|Belal mohamed |0145778996|1101
+images/audi_r8.jpg|Audi R8|Sports Car|2|2|1|Automatic|Zamalik|150000 EGP|week|Mahmoud Aly|0145789644|10111
+images/fiat2023.jpg|Fiat 500|Hatchback|4|2|2|Automatic|Zamalik|20000 EGP|2 weeks|Marwan Aly|0145789644|1458

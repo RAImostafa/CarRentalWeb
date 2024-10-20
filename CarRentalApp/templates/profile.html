@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="profile-title">User Profile</h1>
+            <div class="icon-container">
+                <a href="#" id="home-icon" title="Home" data-home-url="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='images/homeIcon.jpeg') }}" alt="Home Icon" class="icon">
+                </a>
+                <a href="#" onclick="signOut()" title="Sign Out">
+                    <img src="{{ url_for('static', filename='images/signout.jpeg') }}" alt="Sign Out Icon" class="icon">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="content">
+        <div class="profile-container">
+            <div class="user-info">
+                <h1 class="user_Info_cars">User Information</h1>
+                <div class="user-details">
+                    <p><strong>Name:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+                    <p><strong>Email:</strong> {{ user.email }}</p>
+                    <p><strong>Phone:</strong> {{ user.phone }}</p>
+                    <p><strong>Government:</strong> {{ user.government }}</p>
+                </div>
+            </div>
+            <div class="booked-cars">
+                <h1 class="user_Info_cars">Booked Cars</h1>
+                <div class="car-listings">
+                    {% for booking in booked_cars %}
+                    <div class="car">
+                        <img src="{{ url_for('static', filename=booking.image) }}" alt="{{ booking.model }}">
+                        <h3>{{ booking.model }}</h3>
+                        <p><strong>Location:</strong> {{ booking.location }}</p>
+                        <p><strong>Price:</strong> {{ booking.price }}</p>
+                        <button class="cancel-booking-button" onclick="deleteBooking('{{ booking.model }}')">Cancel Booking</button>
+                        <!--<button onclick="deleteBooking('{{ booking.model }}')">Cancel Booking</button>-->
+                    </div>
+                    {% endfor %}
+                    {% if booked_cars|length == 0 %}
+                    <p>No cars booked.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <marquee behavior="scroll" direction="left">
+            Contact us for any problem: <strong>(+20) 1150125119</strong>
+        </marquee>
+    </footer>
+    <script src="{{ url_for('static', filename='profile.js') }}" defer></script>
+</body>
+</html>

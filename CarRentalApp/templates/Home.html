@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="welcome-area">
+                <h1 id="welcome-message">{{ welcome_message }}</h1>
+                <p id="datetime" class="datetime">{{ current_datetime }}</p>
+            </div>
+                        <!-- Search Bar -->
+            <div class="search-container">
+                
+                <input type="text" id="carSearch" placeholder="🔍 Search for cars by model..." onkeyup="searchCars()">
+            </div>
+
+             <!-- Toggle image for filtering cars -->
+            <img id="filterToggle" src="{{ url_for('static', filename='images/filter (1).png') }}" alt="Filter Toggle" class="filter-image" onclick="toggleFilter()">
+            <span id="filterLabel" class="filter-image"></span>
+            <!-- User Profile Icon -->
+            <a href="{{ url_for('profile') }}" title="User Profile" class="profile-link">
+                <img src="{{ url_for('static', filename='images/profileIcon.jpeg') }}" alt="Profile Icon" class="profile-image">
+            </a>
+           
+        </div>
+    </header>
+    <div class="container">
+        <!-- Monthly Rentals Section -->
+        <section class="rentals-section" id="monthly-rentals">
+            <h2>Monthly Rentals</h2>
+            <div class="car-listings">
+                {% for car in cars if car.duration == 'month' %}
+                <a href="/car/{{ car.model }}" class="car-link">
+                    <div class="car-card">
+                        <div class="car-image-container">
+                            <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.model }}" class="car-image">
+                        </div>
+                        <h3>{{ car.model }}</h3>
+                        <p>Location: {{ car.location }}</p>
+                        <p>Price: <span class="price">{{ car.price }}</span></p>
+                        <p><strong>Capacity: {{ car.capacity }}</strong></p>
+                        {% if car.status == 'booked' %}
+                        <span class="booked-flag">Booked</span>
+                        {% endif %}
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+        <!-- Two-Week Rentals Section -->
+        <section class="rentals-section" id="two-week-rentals">
+            <h2>Two-Week Rentals</h2>
+            <div class="car-listings">
+                {% for car in cars if car.duration == '2 weeks' %}
+                <a href="/car/{{ car.model }}" class="car-link">
+                    <div class="car-card">
+                        <div class="car-image-container">
+                            <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.model }}" class="car-image">
+                        </div>
+                        <h3>{{ car.model }}</h3>
+                        <p>Location: {{ car.location }}</p>
+                        <p>Price: <span class="price">{{ car.price }}</span></p>
+                        <p><strong>Capacity: {{ car.capacity }}</strong></p>
+                        {% if car.status == 'booked' %}
+                        <span class="booked-flag">Booked</span>
+                        {% endif %}
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+        <!-- Weekly Rentals Section -->
+        <section class="rentals-section" id="weekly-rentals">
+            <h2>Weekly Rentals</h2>
+            <div class="car-listings">
+                {% for car in cars if car.duration == 'week' %}
+                <a href="/car/{{ car.model }}" class="car-link">
+                    <div class="car-card">
+                        <div class="car-image-container">
+                            <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.model }}" class="car-image">
+                        </div>
+                        <h3>{{ car.model }}</h3>
+                        <p>Location: {{ car.location }}</p>
+                        <p>Price: <span class="price">{{ car.price }}</span></p>
+                        <p><strong>Capacity: {{ car.capacity }}</strong></p>
+                        {% if car.status == 'booked' %}
+                        <span class="booked-flag">Booked</span>
+                        {% endif %}
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <marquee behavior="scroll" direction="left">
+            Contact us for any problem: <strong>(+20) 1150125119</strong>
+        </marquee>
+    </footer>
+    <script src="{{ url_for('static', filename='home.js') }}" defer></script>
+</body>
+</html>
