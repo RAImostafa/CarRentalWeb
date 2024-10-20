@@ -1,3 +1,4 @@
+/* home icon*/
 document.addEventListener('DOMContentLoaded', function() {
     const homeIcon = document.getElementById('home-icon');
     const homeUrl = homeIcon.getAttribute('data-home-url');

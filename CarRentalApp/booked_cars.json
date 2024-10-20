@@ -10,34 +10,6 @@
             "role": "user"
         },
         "car": {
-            "image": "images/honda_civic.png",
-            "model": "Honda Civic",
-            "type": "Standard",
-            "capacity": "5",
-            "doors": "4",
-            "luggage": "3",
-            "transmission": "Automatic",
-            "mileage": "Unlimited",
-            "location": "3 Tahrir Square",
-            "price": "6000.75 ",
-            "duration": "month",
-            "owner": "Sara Mostafa",
-            "phone": "01234567890",
-            "plate_number": "1213",
-            "status": "booked"
-        }
-    },
-    {
-        "user": {
-            "first_name": "sara",
-            "last_name": "salah",
-            "email": "sara_salah895@gmail.com",
-            "phone": "01150125119",
-            "government": "helwan",
-            "password": "123456789aa",
-            "role": "user"
-        },
-        "car": {
             "image": "images/bmw_3series.jpg",
             "model": "BMW 3 Series",
             "type": "Luxury",

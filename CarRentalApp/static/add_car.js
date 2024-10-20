@@ -1,9 +1,6 @@
-// add_car.js
-
 // Function to validate the form before submission
 function validateForm(event) {
     event.preventDefault(); // Prevent the default form submission
-    console.log("validate");
     const imagePath = document.getElementById('image_path').value;
     const model = document.getElementById('model').value;
     const carType = document.getElementById('car_type').value;
@@ -25,10 +22,6 @@ function validateForm(event) {
         alert("Please fill in all fields.");
         return;
     }
-
-    // Additional validation can be added here (e.g., phone number format, numeric fields)
-    
-    // If validation passes, submit the form
     document.querySelector('form').submit();
 }
 

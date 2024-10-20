@@ -119,7 +119,6 @@ def car(car_model):
     return render_template('car_page.html', car=selected_car)
 
 
-
 @app.route('/book_car', methods=['POST'])
 def book_car():
     if 'user_id' not in session:
@@ -132,33 +131,12 @@ def book_car():
         return jsonify({"message": "User not found"}), 404
 
     car_model = request.json['car_model']
-    cars = Car.get_cars()
-    car = next((c for c in cars if c.model == car_model), None)
-    if not car:
-        return jsonify({"message": "Car not found"}), 404
+    booking_info, message = Car.book_car(user, car_model)
 
-    try:
-        with open("booked_cars.json", "r") as file:
-            bookings = json.load(file)
-    except FileNotFoundError:
-        bookings = []
+    if not booking_info:
+        return jsonify({"message": message}), 404 if message == "Car not found" else 409
 
-    # Check if the car is already booked
-    if any(booking['car']['model'] == car_model for booking in bookings):
-        return jsonify({"message": "Car is already booked"}), 409
-
-    booking_info = {
-        "user": user,
-        "car": {**car.__dict__, "status": "booked"}
-    }
-
-    bookings.append(booking_info)
-
-    with open("booked_cars.json", "w") as file:
-        json.dump(bookings, file, indent=4)
-
-    return jsonify({"message": "Car booked successfully"}), 200
-
+    return jsonify({"message": message}), 200
 
 
 
@@ -170,18 +148,9 @@ def delete_booking():
     email = session['user_id']
     car_model = request.json['car_model']
 
-    try:
-        with open("booked_cars.json", "r") as file:
-            bookings = json.load(file)
-    except FileNotFoundError:
-        bookings = []
+    message = Car.delete_booking(email, car_model)
+    return jsonify({"message": message}), 200
 
-    bookings = [booking for booking in bookings if not (booking['car']['model'] == car_model and booking['user']['email'] == email)]
-
-    with open("booked_cars.json", "w") as file:
-        json.dump(bookings, file, indent=4)
-
-    return jsonify({"message": "Booking cancelled successfully"}), 200
 
 
 
