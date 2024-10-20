@@ -3,7 +3,7 @@
 // Function to validate the form before submission
 function validateForm(event) {
     event.preventDefault(); // Prevent the default form submission
-
+    console.log("validate");
     const imagePath = document.getElementById('image_path').value;
     const model = document.getElementById('model').value;
     const carType = document.getElementById('car_type').value;
@@ -11,7 +11,6 @@ function validateForm(event) {
     const doors = document.getElementById('doors').value;
     const bags = document.getElementById('bags').value;
     const transmission = document.getElementById('transmission').value;
-    const availability = document.getElementById('availability').value;
     const location = document.getElementById('location').value;
     const price = document.getElementById('price').value;
     const duration = document.getElementById('duration').value;
@@ -21,7 +20,7 @@ function validateForm(event) {
 
     // Basic validation checks
     if (!imagePath || !model || !carType || !seats || !doors || !bags || 
-        !transmission || !availability || !location || !price || 
+        !transmission || !location || !price || 
         !duration || !renterName || !renterPhone || !plateNumber) {
         alert("Please fill in all fields.");
         return;

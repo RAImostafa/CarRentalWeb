@@ -152,7 +152,7 @@ def sign_out():
 
 # ************************************** CAR CLASS FUNS  *********************************
 class Car:
-    def __init__(self, image, model, type, capacity, doors, luggage, transmission, mileage, location, price, duration, owner, phone, plate_number):
+    def __init__(self, image, model, type, capacity, doors, luggage, transmission,  location, price, duration, owner, phone, plate_number):
         self.image = image
         self.model = model
         self.type = type
@@ -160,7 +160,6 @@ class Car:
         self.doors = doors
         self.luggage = luggage
         self.transmission = transmission
-        self.mileage = mileage
         self.location = location
         self.price = price
         self.duration = duration
@@ -176,12 +175,7 @@ class Car:
         car_data = [tuple(line.split("|")) for line in content.strip().split("\n") if line]
         cars = [Car(*data) for data in car_data]
         return cars
-    
-    @staticmethod
-    def get_booked_cars():
-        with open('booked_cars.json', 'r') as f:
-            booked_cars = json.load(f)
-        return booked_cars
+
 
 
 
@@ -217,19 +211,6 @@ def home():
 
     return render_template('Home.html', welcome_message=welcome_message, current_datetime=current_datetime, cars=cars)
 
-
-@app.route('/get_cars')
-def get_cars():
-    filter_type = request.args.get('filter', 'all')
-    cars = Car.get_cars()  # Fetch all cars
-    booked_cars = Car.get_booked_cars()  # Fetch booked cars from booked_cars.json
-
-    if filter_type == 'available':
-        # Filter out booked cars
-        available_cars = [car for car in cars if car['plate_number'] not in [booked_car['car']['plate_number'] for booked_car in booked_cars]]
-        return jsonify(available_cars)
-    else:
-        return jsonify(cars)
 
 
 @app.route('/car/<car_model>')
@@ -381,7 +362,6 @@ def add_car():
             "doors": request.form['doors'],
             "luggage": request.form['bags'],
             "transmission": request.form['transmission'],
-            "mileage": request.form['availability'],
             "location": request.form['location'],
             "price": price,
             "duration": request.form['duration'],

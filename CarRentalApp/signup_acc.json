@@ -48,5 +48,14 @@
         "government": "helwan",
         "password": "123456789aa",
         "role": "user"
+    },
+    {
+        "first_name": "reem",
+        "last_name": "mostafa",
+        "email": "rania.mustafa123@gmail.com",
+        "phone": "01150125119",
+        "government": "helwan",
+        "password": "123456789ASD",
+        "role": "user"
     }
 ]

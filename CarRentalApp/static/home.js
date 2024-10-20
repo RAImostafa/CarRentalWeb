@@ -1,15 +1,3 @@
-function loadWelcomeMessage() {
-    const welcomeMessage = document.getElementById('welcome-message');
-    let username = localStorage.getItem('username');
-    if (username) {
-        welcomeMessage.innerHTML = `Welcome back, ${first_name}!`;
-    } else {
-        welcomeMessage.innerHTML = "Welcome!";
-    }
-}
-
-
-
 
 function updateDateTime() {
     const dateTimeElement = document.getElementById('datetime');

@@ -15,12 +15,13 @@
             </div>
                         <!-- Search Bar -->
             <div class="search-container">
-                <input type="text" id="carSearch" placeholder="Search for cars by model..." onkeyup="searchCars()">
+                
+                <input type="text" id="carSearch" placeholder="🔍 Search for cars by model..." onkeyup="searchCars()">
             </div>
 
              <!-- Toggle image for filtering cars -->
-            <img id="filterToggle" src="{{ url_for('static', filename='images/Switch.svg') }}" alt="Filter Toggle" class="filter-image" onclick="toggleFilter()">
-            <span id="filterLabel" class="filter-label"></span>
+            <img id="filterToggle" src="{{ url_for('static', filename='images/filter (1).png') }}" alt="Filter Toggle" class="filter-image" onclick="toggleFilter()">
+            <span id="filterLabel" class="filter-image"></span>
             <!-- User Profile Icon -->
             <a href="{{ url_for('profile') }}" title="User Profile" class="profile-link">
                 <img src="{{ url_for('static', filename='images/profileIcon.jpeg') }}" alt="Profile Icon" class="profile-image">
@@ -42,7 +43,7 @@
                         <h3>{{ car.model }}</h3>
                         <p>Location: {{ car.location }}</p>
                         <p>Price: <span class="price">{{ car.price }}</span></p>
-                        <p><strong>Seats Number: {{ car.capacity }}</strong></p>
+                        <p><strong>Capacity: {{ car.capacity }}</strong></p>
                         {% if car.status == 'booked' %}
                         <span class="booked-flag">Booked</span>
                         {% endif %}
@@ -64,7 +65,7 @@
                         <h3>{{ car.model }}</h3>
                         <p>Location: {{ car.location }}</p>
                         <p>Price: <span class="price">{{ car.price }}</span></p>
-                        <p><strong>Seats Number: {{ car.capacity }}</strong></p>
+                        <p><strong>Capacity: {{ car.capacity }}</strong></p>
                         {% if car.status == 'booked' %}
                         <span class="booked-flag">Booked</span>
                         {% endif %}
@@ -86,7 +87,7 @@
                         <h3>{{ car.model }}</h3>
                         <p>Location: {{ car.location }}</p>
                         <p>Price: <span class="price">{{ car.price }}</span></p>
-                        <p><strong>Seats Number: {{ car.capacity }}</strong></p>
+                        <p><strong>Capacity: {{ car.capacity }}</strong></p>
                         {% if car.status == 'booked' %}
                         <span class="booked-flag">Booked</span>
                         {% endif %}
