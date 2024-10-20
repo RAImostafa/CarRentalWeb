@@ -28,7 +28,7 @@ Library other than the random module.
                3-OS
 
 
-- [✔️] It contains at least one class written by you that has
+-[✔️] It contains at least one class written by you that has
 both properties and methods. It uses `__init__()` to let the
 class initialize the object's attributes (note that
 `__init__()` doesn't count as a method). This includes
@@ -91,8 +91,7 @@ and the line number(s) of at least
 
 -[✔️] It is styled using your own CSS
 
-- [✔️] The code follows the code and style conventions as introduced in the course, is fully documented using comments and doesn't contain unused or experimental code. In particular, the code should not use `print()` or
-`console.log()` for any information the app user should see.
+-[✔️] The code follows the code and style conventions as introduced in the course, is fully documented using comments and doesn't contain unused or experimental code. In particular, the code should not use `print()` or `console.log()` for any information the app user should see.
 Instead, all user feedback needs to be visible in the
 browser. 
 
