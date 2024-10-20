@@ -18,7 +18,7 @@ Flask: You can install Flask using pip, Python's package installer. Run the foll
 Jinja in Visual Studio Code: Ensure you have Visual Studio Code installed. Jinja is a templating engine used by Flask, and it should be integrated into Visual Studio Code by default when you have the Python extension installed.
 
 ## Project Checklist
--[✔️] It is available on GitHub. (https://github.com/RAImostafa/CarRentalWeb)
+-[✔️] It is available on GitHub. (https://github.com/RAImostafa/CarRentalWeb)                           
 -[✔️] It uses the Flask web framework.
 -[✔️] It uses at least one module from the Python Standard
 Library other than the random module.
