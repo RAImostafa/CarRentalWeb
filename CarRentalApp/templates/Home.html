@@ -16,15 +16,15 @@
                         <!-- Search Bar -->
             <div class="search-container">
                 
-                <input type="text" id="carSearch" placeholder="🔍 Search for cars by model..." onkeyup="searchCars()">
+                <input type="text" id="carSearch" placeholder="Search for cars by model..." onkeyup="searchCars()">
             </div>
 
              <!-- Toggle image for filtering cars -->
-            <img id="filterToggle" src="{{ url_for('static', filename='images/filter (1).png') }}" alt="Filter Toggle" class="filter-image" onclick="toggleFilter()">
+            <img id="filterToggle" src="{{ url_for('static', filename='images/rename.svg') }}" alt="Filter Toggle" class="filter-image" onclick="toggleFilter()">
             <span id="filterLabel" class="filter-image"></span>
             <!-- User Profile Icon -->
             <a href="{{ url_for('profile') }}" title="User Profile" class="profile-link">
-                <img src="{{ url_for('static', filename='images/profileIcon.jpeg') }}" alt="Profile Icon" class="profile-image">
+                <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-image">
             </a>
            
         </div>

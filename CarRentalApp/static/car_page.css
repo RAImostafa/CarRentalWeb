@@ -2,7 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
-    background: url('images/Car_details.svg')no-repeat center center fixed;
+    background: url('images/car_details.svg')no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;

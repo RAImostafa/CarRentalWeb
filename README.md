@@ -22,10 +22,10 @@ Jinja in Visual Studio Code: Ensure you have Visual Studio Code installed. Jinja
 -[✔️] It uses the Flask web framework.
 -[✔️] It uses at least one module from the Python Standard
 Library other than the random module.
-- Module name: 1-datetime
+Module name: 1-datetime
                2-json
                3-OS
-- [✔️] It contains at least one class written by you that has
+-[✔️] It contains at least one class written by you that has
 both properties and methods. It uses `__init__()` to let the
 class initialize the object's attributes (note that
 `__init__()` doesn't count as a method). This includes
@@ -68,8 +68,7 @@ localStorage of the web browser.
                 file name : carRental.py
                 lines:
 
--[✔️] It contains loops. Please provide below the file name
-and the line number(s) of at least
+-[✔️] It contains loops. Please provide below the file name and the line number(s) of at least
                  one example of a loop in your code.
                  - File name:carRental.py
                  - Line number(s):58,66,115,129

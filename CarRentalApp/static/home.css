@@ -18,11 +18,13 @@ body, html {
 }
 
 .filter-image {
-    width: 36px; /* Adjust size to make it larger */
-    height: 36px; /* Match the height of the input */
-    cursor: pointer; /* Change cursor to pointer */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    cursor: pointer;
     margin-left: 10px; /* Spacing from the search bar */
-    vertical-align: middle; /* Align vertically with the input field */
+    
 }
 
 .search-container {
@@ -118,9 +120,11 @@ h3 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    
 }
 
 p {
+   
     font-size: 14px;
     color: #333;
     margin-bottom: 5px;
@@ -171,5 +175,6 @@ p {
 }
 
 
-
-
+.rentals-section{
+    margin-left: 10px;
+}

@@ -53,5 +53,32 @@
             "plate_number": "1245",
             "status": "booked"
         }
+    },
+    {
+        "user": {
+            "first_name": "Ziad ",
+            "last_name": "hesham ",
+            "email": "ziad_hesham1999@gmail.com",
+            "phone": "01140125119",
+            "government": "Dokki",
+            "password": "123456789QWER",
+            "role": "user"
+        },
+        "car": {
+            "image": "images/ford_focus.jpg",
+            "model": "Ford Focus",
+            "car_type": "Economy",
+            "capacity": "5",
+            "doors": "4",
+            "luggage": "2",
+            "transmission": "Manual",
+            "location": "Giza",
+            "price": "4600.00 ",
+            "duration": "week",
+            "owner": "Amal Khaled",
+            "phone": "01087654321",
+            "plate_number": "2021",
+            "status": "booked"
+        }
     }
 ]
