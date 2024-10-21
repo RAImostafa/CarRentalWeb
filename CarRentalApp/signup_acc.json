@@ -93,5 +93,14 @@
         "government": "Giza",
         "password": "123456789as",
         "role": "user"
+    },
+    {
+        "first_name": "mohamed",
+        "last_name": "mostafa",
+        "email": "mohamed_mustafa@gmail.com",
+        "phone": "011259963714",
+        "government": "6 October",
+        "password": "123456789iyr",
+        "role": "user"
     }
 ]

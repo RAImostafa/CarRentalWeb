@@ -56,6 +56,12 @@
     
             <div class="form-group">
                 <label for="duration">Duration:</label>
+                 <select id="duration" name="duration" required>
+                     <option value="week">Week</option>
+                     <option value="2 weeks">2 Weeks</option>
+                     <option value="month">Month</option>
+                 </select>
+
                 <input type="text" id="duration" name="duration" value="{{ car.duration }}" required>
             </div>
     

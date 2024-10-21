@@ -1,13 +1,14 @@
 images/chevrolet_aveo.jpg|Chevrolet Aveo|Economy|5|4|2|Automatic|7 El-Nozha|4798 EGP|week|Ahmed Mahmoud|01012345678|1234
-images/toyota_corolla.webp|Toyota Corolla|Standard|5|4|2|Automatic|Abbasia|123 EGP|week|Mariam Ahmed|01098765432|5678
-images/honda_civic.png|Honda Civic|Standard|5|4|3|Automatic|3 Tahrir Square|7000|month|Sara Mostafa|01234567890|1213
+images/toyota_corolla.webp|Toyota Corolla|Standard|5|4|2|Automatic|Abbasia|123456 EGP|week|Mariam Ahmed|01098765432|5678
+images/honda_civic.png|Honda Civic|Standard|5|4|3|Automatic|3 Tahrir Square|8010 EGP|month|Sara Mostafa|01234567890|1213
 images/Kia Sportage.avif|Kia Sportage|SUV|5|4|4|Automatic|60 Maadi|8000 EGP|week|Nada Ibrahim|01123456789|1617
-images/Hyundai Elantra.webp|Hyundai Elantra|Standard|5|4|2|Automatic|New Cairo|5100 EGP|2 weeks|Hassan Ali|01298765432|1819
-images/ford_focus.jpg|Ford Focus|Economy|5|4|2|Manual|Giza|4600 EGP |week|Amal Khaled|01087654321|2021
+images/Hyundai Elantra.webp|Hyundai Elantra|Standard|5|4|2|Automatic|New Cairo|20000 EGP|2 weeks|Hassan Ali|01298765432|1819
+images/ford_focus.jpg|Ford Focus|Economy|5|4|2|Manual|Giza|4600 EGP|week|Amal Khaled|01087654321|2021
 images/GMC2017.jpg|GMC 2017|SUV|7|5|4|Automatic|Nozha|20000 EGP|week|Rania Mostafa|01150147789|2223
 images/mercedes-c-class-2015-hero.jpg|mercedes 2015|standard |5|4|1|Automatic|Maadi|100000 EGP|month|Rania Mostafa|789654123|1245
 images/nissan_sentra_2019.jpg|Nissan Sentra|Sedan|5|4|3|Automatic|Al haram |10000 EGP|2 weeks|Esraa magdy |0145778962|1110
 images/Nissan_Ariya_Electric_2023.jpg|Nissan Ariya 2023|SUV|5|4|4|Automatic|Faisal|15000 EGP|2 weeks|Esraa magdy |0145778962|110
-images/copra2002.jpg|Acura CL|Coupe|4|4|2|Automatic|Faisal|15000 EGP|2 weeks|Belal mohamed |0145778996|1101
 images/fiat2023.jpg|Fiat 500|Hatchback|4|2|2|Automatic|Zamalik|20000 EGP|2 weeks|Marwan Aly|0145789644|1458
-images/Camry-Hybrid-Exterior_copy_1200x800-1170x780.jpg|Hybrid 2022|midsize sedan|4|4|66|Automatic|west El balad |900000|week|Marwan mahmoud|0145789644|14566
+images/Camry-Hybrid-Exterior_copy_1200x800-1170x780.jpg|Hybrid 2022|midsize sedan|4|4|6600 EGP|Automatic|west El balad |900000|week|Marwan mahmoud|0145789644|14566
+images/volvo_xc90.jpg|volvo xc90 2016|SUV|7|5|1|Automatic|Helwan |20000 EGP|week|Marwan mahmoud|0145789644|14567
+images/Geely-Binrui-2.jpg|Geely Binrui|sedan|5|4|1|automatic |faisal|20000 EGP|month|sabry|01140123116|12345

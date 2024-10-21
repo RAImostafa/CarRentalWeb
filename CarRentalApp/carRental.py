@@ -236,7 +236,7 @@ def edit_car(car_model):
             # Save updated car details back to cars.txt
             with open('cars.txt', 'w') as file:
                 for car in cars:
-                    file.write("|".join([car.image, car.model, car.car_type, str(car.capacity), str(car.doors), str(car.luggage), car.transmission, car.location, car.price, car.duration, car.owner, car.phone, car.plate_number]) + "\n")
+                    file.write("|".join([car.image, car.model, car.car_type, str(car.capacity), str(car.doors), str(car.luggage), car.transmission, car.location, str(car.price), car.duration, car.owner, car.phone, car.plate_number]) + "\n")
 
             return redirect(url_for('admin_page'))
 

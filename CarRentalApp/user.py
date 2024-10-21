@@ -193,6 +193,6 @@ class User:
         
         grouped_bookings = defaultdict(list)
         for booking in bookings:
-            user = (booking['user']['first_name'], booking['user']['last_name'], booking['user']['email'])
+            user = (booking['user']['first_name'], booking['user']['last_name'], booking['user']['email'], booking['user']['phone'])
             grouped_bookings[user].append(booking)
         return grouped_bookings

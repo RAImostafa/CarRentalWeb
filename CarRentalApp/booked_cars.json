@@ -1,33 +1,6 @@
 [
     {
         "user": {
-            "first_name": "Ziad ",
-            "last_name": "hesham ",
-            "email": "ziad_hesham1999@gmail.com",
-            "phone": "01140125119",
-            "government": "Dokki",
-            "password": "123456789QWER",
-            "role": "user"
-        },
-        "car": {
-            "image": "images/mercedes-c-class-2015-hero.jpg",
-            "model": "mercedes 2015",
-            "car_type": "standard ",
-            "capacity": "5",
-            "doors": "4",
-            "luggage": "1",
-            "transmission": "Automatic",
-            "location": "Maadi",
-            "price": "100000 EGP",
-            "duration": "month",
-            "owner": "Rania Mostafa",
-            "phone": "789654123",
-            "plate_number": "1245",
-            "status": "booked"
-        }
-    },
-    {
-        "user": {
             "first_name": "rania",
             "last_name": "mustafa",
             "email": "rania.mustafa1792@gmail.com",
@@ -50,6 +23,60 @@
             "owner": "Amal Khaled",
             "phone": "01087654321",
             "plate_number": "2021",
+            "status": "booked"
+        }
+    },
+    {
+        "user": {
+            "first_name": "mohamed",
+            "last_name": "mostafa",
+            "email": "mohamed_mustafa@gmail.com",
+            "phone": "011259963714",
+            "government": "6 October",
+            "password": "123456789iyr",
+            "role": "user"
+        },
+        "car": {
+            "image": "images/honda_civic.png",
+            "model": "Honda Civic",
+            "car_type": "Standard",
+            "capacity": "5",
+            "doors": "4",
+            "luggage": "3",
+            "transmission": "Automatic",
+            "location": "3 Tahrir Square",
+            "price": "7000",
+            "duration": "month",
+            "owner": "Sara Mostafa",
+            "phone": "01234567890",
+            "plate_number": "1213",
+            "status": "booked"
+        }
+    },
+    {
+        "user": {
+            "first_name": "Ziad ",
+            "last_name": "hesham ",
+            "email": "ziad_hesham1999@gmail.com",
+            "phone": "01140125119",
+            "government": "Dokki",
+            "password": "123456789QWER",
+            "role": "user"
+        },
+        "car": {
+            "image": "images/mercedes-c-class-2015-hero.jpg",
+            "model": "mercedes 2015",
+            "car_type": "standard ",
+            "capacity": "5",
+            "doors": "4",
+            "luggage": "1",
+            "transmission": "Automatic",
+            "location": "Maadi",
+            "price": "100000 ",
+            "duration": "month",
+            "owner": "Rania Mostafa",
+            "phone": "789654123",
+            "plate_number": "1245",
             "status": "booked"
         }
     }
