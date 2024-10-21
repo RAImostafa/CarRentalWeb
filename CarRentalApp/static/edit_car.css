@@ -1,0 +1,102 @@
+/* General page setup */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container styling for the form */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+}
+
+/* Header styling */
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #282848;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-wrap: wrap; /* Allows two columns */
+    justify-content: space-between;
+}
+
+/* Styling for each form group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Each column takes about half the width */
+    margin-bottom: 15px;
+}
+
+/* Labels for the inputs */
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Input fields */
+input[type="text"], 
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Readonly field styling */
+input[readonly] {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+/* Full-width fields (used for fields that should span both columns) */
+.full-width {
+    width: 100%;
+}
+
+/* Save Changes button */
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    width: 100%; /* Makes button span full width of form */
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Optional: Additional spacing for larger screens */
+@media (min-width: 768px) {
+    .container {
+        max-width: 800px;
+    }
+}

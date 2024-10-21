@@ -66,3 +66,4 @@ class Car:
             json.dump(bookings, file, indent=4)
 
         return "Booking cancelled successfully"
+    

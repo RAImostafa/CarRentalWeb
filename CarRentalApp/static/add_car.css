@@ -1,6 +1,6 @@
 /* Set a dark blue background for the page */
 body {
-    background-color: #282848;  /* dark blue */
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;

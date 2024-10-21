@@ -84,5 +84,14 @@
         "government": "Gia",
         "password": "12345abc78",
         "role": "user"
+    },
+    {
+        "first_name": "rania",
+        "last_name": "mustafa",
+        "email": "rania.mustafa1792@gmail.com",
+        "phone": "01150125119",
+        "government": "Giza",
+        "password": "123456789as",
+        "role": "user"
     }
 ]

@@ -98,23 +98,23 @@ class User:
     @staticmethod
     def add_car(form_data, file):
         # Check if the file part exists and validate the file
-        if 'image_path' not in file or file.filename == '':
+        if file.filename == '':
             return "Error: No selected file or file not found."
-
+    
         # Save the file if allowed
         if User.allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            file_path = os.path.join("static/uploads", filename)
+            file_path = os.path.join("static/images", filename)  # Save in 'static/images'
             file.save(file_path)
             image_path = f"images/{filename}"
         else:
             return "Error: File type not allowed. Only images are accepted."
-
+    
         # Fetch other form data
         model = form_data['model']
         plate_number = form_data['plate_number']
         price = f"{form_data['price']} EGP"
-
+    
         # Check for duplicate plate numbers
         with open('cars.txt', 'r') as file:
             existing_cars = file.readlines()
@@ -122,7 +122,7 @@ class User:
                 car_details = car.strip().split("|")
                 if car_details[-1] == plate_number:
                     return "Error: Car with this plate number already exists."
-
+    
         # Prepare car data for entry and save it
         car_data = {
             "image": image_path,
@@ -139,10 +139,14 @@ class User:
             "phone": form_data['renter_phone'],
             "plate_number": plate_number
         }
+    
         car_entry = "|".join(car_data.values())
         with open('cars.txt', 'a') as file:
             file.write(car_entry + "\n")
+    
         return None
+
+
 
     @staticmethod
     def remove_booking(car_model):

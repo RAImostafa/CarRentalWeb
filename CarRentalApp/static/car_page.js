@@ -27,15 +27,3 @@ async function bookCar(carModel) {
         alert("An error occurred. Please try again.");
     }
 }
-
-
-/* home icon*/
-document.addEventListener('DOMContentLoaded', function() {
-    const homeIcon = document.getElementById('home-icon');
-    const homeUrl = homeIcon.getAttribute('data-home-url');
-    
-    homeIcon.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent the default behavior
-        window.location.href = homeUrl; // Use the correct URL route name
-    });
-});

@@ -1,40 +1,12 @@
 [
     {
         "user": {
-            "first_name": "sara",
-            "last_name": "salah",
-            "email": "sara_salah895@gmail.com",
-            "phone": "01150125119",
-            "government": "helwan",
-            "password": "123456789aa",
-            "role": "user"
-        },
-        "car": {
-            "image": "images/bmw_3series.jpg",
-            "model": "BMW 3 Series",
-            "type": "Luxury",
-            "capacity": "5",
-            "doors": "4",
-            "luggage": "3",
-            "transmission": "Automatic",
-            "mileage": "Unlimited",
-            "location": "40 Zamalek",
-            "price": "12000.00 ",
-            "duration": "month",
-            "owner": "Omar El-Shenawy",
-            "phone": "01098761234",
-            "plate_number": "1415",
-            "status": "booked"
-        }
-    },
-    {
-        "user": {
-            "first_name": "reem",
-            "last_name": "mostafa",
-            "email": "rania.mustafa123@gmail.com",
-            "phone": "01150125119",
-            "government": "helwan",
-            "password": "123456789ASD",
+            "first_name": "Ziad ",
+            "last_name": "hesham ",
+            "email": "ziad_hesham1999@gmail.com",
+            "phone": "01140125119",
+            "government": "Dokki",
+            "password": "123456789QWER",
             "role": "user"
         },
         "car": {
@@ -56,12 +28,12 @@
     },
     {
         "user": {
-            "first_name": "Ziad ",
-            "last_name": "hesham ",
-            "email": "ziad_hesham1999@gmail.com",
-            "phone": "01140125119",
-            "government": "Dokki",
-            "password": "123456789QWER",
+            "first_name": "rania",
+            "last_name": "mustafa",
+            "email": "rania.mustafa1792@gmail.com",
+            "phone": "01150125119",
+            "government": "Giza",
+            "password": "123456789as",
             "role": "user"
         },
         "car": {
@@ -73,38 +45,11 @@
             "luggage": "2",
             "transmission": "Manual",
             "location": "Giza",
-            "price": "4600.00 ",
+            "price": "4600 EGP ",
             "duration": "week",
             "owner": "Amal Khaled",
             "phone": "01087654321",
             "plate_number": "2021",
-            "status": "booked"
-        }
-    },
-    {
-        "user": {
-            "first_name": "Ziad ",
-            "last_name": "hesham ",
-            "email": "ziad_hesham1999@gmail.com",
-            "phone": "01140125119",
-            "government": "Dokki",
-            "password": "123456789QWER",
-            "role": "user"
-        },
-        "car": {
-            "image": "images/honda_civic.png",
-            "model": "Honda Civic",
-            "car_type": "Standard",
-            "capacity": "5",
-            "doors": "4",
-            "luggage": "3",
-            "transmission": "Automatic",
-            "location": "3 Tahrir Square",
-            "price": "6000.75 ",
-            "duration": "month",
-            "owner": "Sara Mostafa",
-            "phone": "01234567890",
-            "plate_number": "1213",
             "status": "booked"
         }
     }

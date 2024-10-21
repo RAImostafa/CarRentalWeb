@@ -61,9 +61,10 @@ localStorage of the web browser.
 
 -[✔️] It makes use of the reading and writing to the same file feature.
                 cars.txt
-                1- in the admin can *add* a car by func add_car() at line 99 , in "user.py" 
-                2- cars can be *read* through get_cars() at line 19 , in "car.py"
-                3-admin can *delete* a car too by func delete_car(model_to_delete) at line 156 , in "user.py" 
+                1- in the admin can *ADD* a car by func add_car() at line 99 , in "user.py" 
+                2- cars can be *READ* through get_cars() at line 19 , in "car.py"
+                3-admin can *DELETE* a car too by func delete_car(model_to_delete) at line 156 , in "user.py" 
+                4-admin can *EDIT* a car too by func edit_car(car_model) at line 212 , in "carRental.py" 
 
 -[✔️] It contains conditional statements.
                 file name : carRental.py
