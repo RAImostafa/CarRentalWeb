@@ -15,13 +15,16 @@ body {
 
 .header-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    background-color: #282848;
+    background-color: #0056b3;
     padding: 15px;
     color: white;
-    position: relative;
+    height: 80px;
 }
+
+
+
 
 .profile-title {
     flex: 1;

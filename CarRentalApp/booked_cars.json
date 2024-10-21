@@ -80,5 +80,32 @@
             "plate_number": "2021",
             "status": "booked"
         }
+    },
+    {
+        "user": {
+            "first_name": "Ziad ",
+            "last_name": "hesham ",
+            "email": "ziad_hesham1999@gmail.com",
+            "phone": "01140125119",
+            "government": "Dokki",
+            "password": "123456789QWER",
+            "role": "user"
+        },
+        "car": {
+            "image": "images/honda_civic.png",
+            "model": "Honda Civic",
+            "car_type": "Standard",
+            "capacity": "5",
+            "doors": "4",
+            "luggage": "3",
+            "transmission": "Automatic",
+            "location": "3 Tahrir Square",
+            "price": "6000.75 ",
+            "duration": "month",
+            "owner": "Sara Mostafa",
+            "phone": "01234567890",
+            "plate_number": "1213",
+            "status": "booked"
+        }
     }
 ]

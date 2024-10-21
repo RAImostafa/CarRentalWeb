@@ -7,28 +7,31 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
 </head>
 <body>
+    
     <header>
         <div class="header-container">
             <div class="welcome-area">
                 <h1 id="welcome-message">{{ welcome_message }}</h1>
                 <p id="datetime" class="datetime">{{ current_datetime }}</p>
             </div>
-                        <!-- Search Bar -->
-            <div class="search-container">
-                
-                <input type="text" id="carSearch" placeholder="Search for cars by model..." onkeyup="searchCars()">
-            </div>
-
-             <!-- Toggle image for filtering cars -->
-            <img id="filterToggle" src="{{ url_for('static', filename='images/rename.svg') }}" alt="Filter Toggle" class="filter-image" onclick="toggleFilter()">
-            <span id="filterLabel" class="filter-image"></span>
             <!-- User Profile Icon -->
-            <a href="{{ url_for('profile') }}" title="User Profile" class="profile-link">
-                <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-image">
-            </a>
-           
+            <div class="profile-area">
+                <a href="{{ url_for('profile') }}" title="User Profile" class="profile-link">
+                    <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-image">
+                </a>
+            </div>
         </div>
     </header>
+    
+    <!-- Search Bar and Filter Icon -->
+    <div class="search-filter-container">
+        <div class="search-container">
+            <input type="text" id="carSearch" placeholder="Search for cars by model..." onkeyup="searchCars()">
+            <!-- Toggle image for filtering cars -->
+            <img id="filterToggle" src="{{ url_for('static', filename='images/rename.svg') }}" alt="Filter Toggle" class="filter-image" onclick="toggleFilter()">
+            <span id="filterLabel" class="filter-label"></span>
+        </div>
+    </div>
     <div class="container">
         <!-- Monthly Rentals Section -->
         <section class="rentals-section" id="monthly-rentals">
