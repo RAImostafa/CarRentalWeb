@@ -39,8 +39,9 @@ filter: drop-shadow(0px 12px 24px rgba(16, 76, 139, 0.16));
 
 #carSearch {
     width: 700px;
-    padding: 8px;
-    border-radius: 15px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 20px;
     font-size: 16px;
     border: 1.4px solid #434242;
     transition: transform 0.3s ease, box-shadow 0.3s ease;

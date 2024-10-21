@@ -75,5 +75,14 @@
         "government": "Dokki",
         "password": "123456789QWER",
         "role": "user"
+    },
+    {
+        "first_name": "belal",
+        "last_name": "sryo",
+        "email": "belal@gmail.com",
+        "phone": "1122233344",
+        "government": "Gia",
+        "password": "12345abc78",
+        "role": "user"
     }
 ]

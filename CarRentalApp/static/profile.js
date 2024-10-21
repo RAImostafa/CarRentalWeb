@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 function signOut() {
     fetch('/sign_out', {
         method: 'POST',
@@ -24,7 +23,9 @@ function signOut() {
             alert('Sign out failed.');
         }
     })
-    .catch(error => console.error('Error:', error));
+    .catch(() => {
+        alert('An error occurred while signing out.');
+    });
 }
 
 function deleteBooking(carModel) {
@@ -34,10 +35,14 @@ function deleteBooking(carModel) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ car_model: carModel })
-    }).then(response => response.json())
-      .then(data => {
-          alert(data.message);
-          location.reload(); // Refresh the page to update the bookings
-      })
-      .catch(error => console.error('Error:', error));
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+        location.reload(); // Refresh the page to update the bookings
+    })
+    .catch(() => {
+        alert('An error occurred while deleting the booking.');
+    });
 }
+

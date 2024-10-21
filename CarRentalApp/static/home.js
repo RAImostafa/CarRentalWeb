@@ -19,12 +19,10 @@ async function loadCars() {
         };
         
         lines.forEach(line => {
-            console.log("Processing line:", line); // Debugging line
             const [image, name, type, seats, doors, baggage, transmission, mileage, location, price, 
                 availability, owner, phone] = line.split('|');
             
             if (!availability) {
-                console.error("Error: Availability is undefined for line:", line);
                 return; // Skip this iteration if availability is undefined
             }
 
@@ -52,7 +50,7 @@ async function loadCars() {
             }
         });
     } catch (error) {
-        console.error("Error loading car data:", error);
+        return;
     }
 }
 

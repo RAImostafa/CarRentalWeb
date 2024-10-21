@@ -29,6 +29,10 @@ def sign_up():
             return redirect(url_for('home'))
     return render_template('sign_up.html', message=message)
 
+
+
+
+
 @app.route('/sign_in', methods=['GET', 'POST'])
 def sign_in():
     message = ""

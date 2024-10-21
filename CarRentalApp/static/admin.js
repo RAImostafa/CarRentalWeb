@@ -1,3 +1,9 @@
+
+
+
+
+
+
 function signOut() {
     fetch('/sign_out', {
         method: 'POST',
@@ -12,32 +18,29 @@ function signOut() {
             alert('Sign out failed.');
         }
     })
-    .catch(error => console.error('Error:', error));
+    .catch(() => {
+        alert('An error occurred while signing out.');
+    });
 }
 
 function deleteCar(model) {
-   fetch('/delete_car', {
-       method: 'POST',
-       headers: {
-           'Content-Type': 'application/json',
-       },
-       body: JSON.stringify({ model: model })
-   })
-   .then(response => response.json())
-   .then(data => {
-       if (data.success) {
-           alert(data.message);
-           location.reload(); // Refreshes the page
-       } else {
-           alert(data.message);
-       }
-   })
-   .catch(error => console.error('Error:', error));
+    fetch('/delete_car', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ model: model })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+            location.reload(); // Refreshes the page
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(() => {
+        alert('An error occurred while deleting the car.');
+    });
 }
-
-
-
-
-
-
-

@@ -11,5 +11,4 @@ images/mercedes-c-class-2015-hero.jpg|mercedes 2015|standard |5|4|1|Automatic|Ma
 images/nissan_sentra_2019.jpg|Nissan Sentra|Sedan|5|4|3|Automatic|Al haram |10000 EGP|2 weeks|Esraa magdy |0145778962|1110
 images/Nissan_Ariya_Electric_2023.jpg|Nissan Ariya 2023|SUV|5|4|4|Automatic|Faisal|15000 EGP|2 weeks|Esraa magdy |0145778962|110
 images/copra2002.jpg|Acura CL|Coupe|4|4|2|Automatic|Faisal|15000 EGP|2 weeks|Belal mohamed |0145778996|1101
-images/audi_r8.jpg|Audi R8|Sports Car|2|2|1|Automatic|Zamalik|150000 EGP|week|Mahmoud Aly|0145789644|10111
 images/fiat2023.jpg|Fiat 500|Hatchback|4|2|2|Automatic|Zamalik|20000 EGP|2 weeks|Marwan Aly|0145789644|1458

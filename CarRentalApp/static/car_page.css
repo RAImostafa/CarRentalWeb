@@ -1,73 +1,150 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: url('images/car_details.svg')no-repeat center center fixed;
+/*body, html {
+/*    height: 100%;
+/*    margin: 0;
+/*    font-family: Arial, sans-serif;
+/*    background: url('images/car_details.svg')no-repeat center center fixed;
+/*    background-size: cover;
+/*    display: flex;
+/*    justify-content: center;
+/*    align-items: center;
+/*}
+/*
+/*.container {
+/*    padding: 20px;
+/*    color: rgb(40, 40, 72);
+/*    text-align: center;
+/*    max-width: 1000px; /* Set a max-width for the container */
+/*    max-height: 700px;
+/*    background-color: white; /* Optional: add a background color to make the content stand out */
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: add a shadow for a card effect */
+/*    border-radius: 10px; /* Optional: rounded corners */
+/*}
+/*
+/*h1 {
+/*    margin-bottom: 20px;
+/*    font-size: 2.5em; /* Slightly smaller font for the heading */
+/*    
+/*}
+/*
+/*.car-details {
+/*    display: flex;
+/*    flex-wrap: nowrap;
+/*    justify-content: center;
+/*    align-items: center; /* Center image and text vertically */
+/*    gap: 30px; /* Space between image and text */
+/*}
+/*
+/*.car-image {
+/*    width: 40%; /* Reduce image size */
+/*    height: auto;
+/*    border-radius: 10px;
+/*}
+/*
+/*.car-info {
+/*    text-align: left;
+/*    max-width: 30%; /* Adjust the max-width of the text container */
+/*    flex: 1;
+/*    margin-left: 10px; /* Reduce the space between the image and text */
+/*}
+/*
+/*.car-info h2 {
+/*    margin: 10px 0;
+/*    font-size: 2em; /* Smaller font size for the car model */
+/*}
+/*
+/*.car-info p {
+/*    margin: 3px 0; /* Reduce margin between text elements */
+/*    font-size: 1.3em;
+/*}
+/*
+/*.book-button {
+/*    padding: 8px 16px; /* Slightly smaller button */
+/*    background-color: green;
+/*    color: white;
+/*    border: none;
+/*    cursor: pointer;
+/*    font-size: 14px;
+/*    border-radius: 5px;
+/*    margin-top: 15px; /* Reduce top margin */
+/*}
+/*
+/*.book-button:hover {
+/*    background-color: #282848;
+/*}
+/* */
+
+body {
+    background: url('images/car_details.svg') no-repeat center center fixed;
     background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
-.container {
-    padding: 20px;
-    color: rgb(40, 40, 72);
-    text-align: center;
-    max-width: 1000px; /* Set a max-width for the container */
-    max-height: 700px;
-    background-color: white; /* Optional: add a background color to make the content stand out */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: add a shadow for a card effect */
-    border-radius: 10px; /* Optional: rounded corners */
-}
-
-h1 {
-    margin-bottom: 20px;
-    font-size: 2.5em; /* Slightly smaller font for the heading */
-    
-}
-
-.car-details {
+.car-details-container {
+    max-width: 1200px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center; /* Center image and text vertically */
-    gap: 30px; /* Space between image and text */
-}
-
-.car-image {
-    width: 40%; /* Reduce image size */
-    height: auto;
-    border-radius: 10px;
+    align-items: center;
+    padding: 20px;
 }
 
 .car-info {
-    text-align: left;
-    max-width: 30%; /* Adjust the max-width of the text container */
     flex: 1;
-    margin-left: 10px; /* Reduce the space between the image and text */
+    max-width: 600px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
 }
 
 .car-info h2 {
-    margin: 10px 0;
-    font-size: 2em; /* Smaller font size for the car model */
+    color: #007BFF;
 }
 
 .car-info p {
-    margin: 3px 0; /* Reduce margin between text elements */
-    font-size: 1.3em;
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.car-image-container {
+    flex: 1;
+    max-width: 600px;
+    text-align: center;
+}
+
+.car-image {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-button-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .book-button {
-    padding: 8px 16px; /* Slightly smaller button */
-    background-color: green;
+    padding: 10px 20px;
+    background-color: #28a745;
     color: white;
     border: none;
-    cursor: pointer;
-    font-size: 14px;
     border-radius: 5px;
-    margin-top: 15px; /* Reduce top margin */
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
 }
 
 .book-button:hover {
-    background-color: #282848;
+    background-color: #218838;
 }
