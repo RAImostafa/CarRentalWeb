@@ -1,5 +1,7 @@
-from flask import Flask, render_template, request, redirect, url_for, session,jsonify
+from flask import Flask, render_template, request, redirect, url_for, session,jsonify,flash
 import datetime
+import os
+from werkzeug.utils import secure_filename
 from user import User
 from car import Car
 import json
@@ -190,15 +192,26 @@ def remove_booking():
     User.remove_booking(car_model)
     return redirect(url_for('admin_page'))
 
+
 @app.route('/delete_car', methods=['POST'])
 def delete_car():
     data = request.get_json()
     model_to_delete = data.get('model')
+
+    # Check if the car is booked
+    booked_cars = User.get_booked_cars()
+    for bookings in booked_cars.values():
+        for booking in bookings:
+            if booking['car']['model'] == model_to_delete:
+                return jsonify({"success": False, "message": "Cannot delete a booked car."})
+
+    # Proceed to delete if not booked
     car_deleted = User.delete_car(model_to_delete)
     if car_deleted:
-        return jsonify({"success": True, "message": "Car and its booking removed successfully."})
+        return jsonify({"success": True, "message": "Car removed successfully."})
     else:
         return jsonify({"success": False, "message": "Car not found."})
+
 
 @app.route('/booked_cars')
 def booked_cars():
@@ -206,45 +219,65 @@ def booked_cars():
     return render_template('booked_cars.html', grouped_bookings=grouped_bookings)
 
 
+
+
+
 @app.route('/edit_car/<car_model>', methods=['GET', 'POST'])
 def edit_car(car_model):
     if 'user_id' not in session:
         return redirect(url_for('sign_in'))
+    
     email = session['user_id']
     users = User.get_list()
     user = next((user for user in users if user['email'] == email), None)
-
+    
     if user and user.get('role') == 'admin':
         cars = Car.get_cars()
         selected_car = next((car for car in cars if car.model == car_model), None)
         
+        booked_cars = User.get_booked_cars()
+        for bookings in booked_cars.values():
+            for booking in bookings:
+                if booking['car']['model'] == car_model:
+                    error_message = "Cannot edit a booked car."
+                    return render_template('admin.html', error_message=error_message)
+                   
+
         if request.method == 'POST':
-            # Update car details from form data
-            selected_car.image = request.form['image']
-            selected_car.car_type = request.form['car_type']
-            selected_car.capacity = request.form['capacity']
-            selected_car.doors = request.form['doors']
-            selected_car.luggage = request.form['luggage']
-            selected_car.transmission = request.form['transmission']
-            selected_car.location = request.form['location']
-            selected_car.price = request.form['price']
-            selected_car.duration = request.form['duration']
-            selected_car.owner = request.form['owner']
-            selected_car.phone = request.form['phone']
-            selected_car.plate_number = request.form['plate_number']
+            file = request.files['image_path']
+            form_data = request.form
+
+            # Save the file if allowed
+            if file and User.allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file_path = os.path.join("static/images", filename)  # Save in 'static/images'
+                file.save(file_path)
+                selected_car.image = f"images/{filename}"
+            
+            selected_car.car_type = form_data['car_type']
+            selected_car.capacity = form_data['capacity']
+            selected_car.doors = form_data['doors']
+            selected_car.luggage = form_data['luggage']
+            selected_car.transmission = form_data['transmission']
+            selected_car.location = form_data['location']
+            selected_car.price = form_data['price']
+            selected_car.duration = form_data['duration']
+            selected_car.owner = form_data['owner']
+            selected_car.phone = form_data['phone']
+            selected_car.plate_number = form_data['plate_number']
 
             # Save updated car details back to cars.txt
             with open('cars.txt', 'w') as file:
                 for car in cars:
-                    file.write("|".join([car.image, car.model, car.car_type, str(car.capacity), str(car.doors), str(car.luggage), car.transmission, car.location, str(car.price), car.duration, car.owner, car.phone, car.plate_number]) + "\n")
-
+                    file.write("|".join([car.image, car.model, car.car_type, str(car.capacity), str(car.doors),
+                                         str(car.luggage), car.transmission, car.location, str(car.price), car.duration,
+                                         car.owner, car.phone, car.plate_number]) + "\n")
+            
             return redirect(url_for('admin_page'))
-
+        
         return render_template('edit_car.html', car=selected_car)
     
     return redirect(url_for('home'))
-
-
 
 
 

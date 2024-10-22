@@ -102,5 +102,14 @@
         "government": "6 October",
         "password": "123456789iyr",
         "role": "user"
+    },
+    {
+        "first_name": "saraa",
+        "last_name": "salah",
+        "email": "sara.salah@gmail.com",
+        "phone": "0126056269",
+        "government": "helwan",
+        "password": "qwedsa20304050",
+        "role": "user"
     }
 ]

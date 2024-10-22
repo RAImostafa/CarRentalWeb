@@ -21,6 +21,14 @@
             </div>
         </div>
     </header>
+
+    <!-- Display Error Message if exists -->
+    {% if error_message %}
+        <div class="error-message" style="color: red; margin: 20px 0;">
+            {{ error_message }}
+        </div>
+   
+    {% else %}
     <div class="all-cars-title">All Cars</div>
     <section class="car-listings">
         <div class="car-listings">
@@ -37,6 +45,7 @@
             {% endfor %}
         </div>
     </section>
+    {% endif %}
     <script src="{{ url_for('static', filename='admin.js') }}" defer></script>
 </body>
 </html>

@@ -1,60 +1,6 @@
 [
     {
         "user": {
-            "first_name": "rania",
-            "last_name": "mustafa",
-            "email": "rania.mustafa1792@gmail.com",
-            "phone": "01150125119",
-            "government": "Giza",
-            "password": "123456789as",
-            "role": "user"
-        },
-        "car": {
-            "image": "images/ford_focus.jpg",
-            "model": "Ford Focus",
-            "car_type": "Economy",
-            "capacity": "5",
-            "doors": "4",
-            "luggage": "2",
-            "transmission": "Manual",
-            "location": "Giza",
-            "price": "4600 EGP ",
-            "duration": "week",
-            "owner": "Amal Khaled",
-            "phone": "01087654321",
-            "plate_number": "2021",
-            "status": "booked"
-        }
-    },
-    {
-        "user": {
-            "first_name": "mohamed",
-            "last_name": "mostafa",
-            "email": "mohamed_mustafa@gmail.com",
-            "phone": "011259963714",
-            "government": "6 October",
-            "password": "123456789iyr",
-            "role": "user"
-        },
-        "car": {
-            "image": "images/honda_civic.png",
-            "model": "Honda Civic",
-            "car_type": "Standard",
-            "capacity": "5",
-            "doors": "4",
-            "luggage": "3",
-            "transmission": "Automatic",
-            "location": "3 Tahrir Square",
-            "price": "7000",
-            "duration": "month",
-            "owner": "Sara Mostafa",
-            "phone": "01234567890",
-            "plate_number": "1213",
-            "status": "booked"
-        }
-    },
-    {
-        "user": {
             "first_name": "Ziad ",
             "last_name": "hesham ",
             "email": "ziad_hesham1999@gmail.com",
@@ -77,6 +23,87 @@
             "owner": "Rania Mostafa",
             "phone": "789654123",
             "plate_number": "1245",
+            "status": "booked"
+        }
+    },
+    {
+        "user": {
+            "first_name": "mohamed",
+            "last_name": "mostafa",
+            "email": "mohamed_mustafa@gmail.com",
+            "phone": "011259963714",
+            "government": "6 October",
+            "password": "123456789iyr",
+            "role": "user"
+        },
+        "car": {
+            "image": "images/Geely-Binrui-2.jpg",
+            "model": "Geely Binrui",
+            "car_type": "sedan",
+            "capacity": "5",
+            "doors": "4",
+            "luggage": "1",
+            "transmission": "automatic ",
+            "location": "faisal",
+            "price": "20000 EGP",
+            "duration": "month",
+            "owner": "sabry",
+            "phone": "01140123116",
+            "plate_number": "12345",
+            "status": "booked"
+        }
+    },
+    {
+        "user": {
+            "first_name": "mohamed",
+            "last_name": "mostafa",
+            "email": "mohamed_mustafa@gmail.com",
+            "phone": "011259963714",
+            "government": "6 October",
+            "password": "123456789iyr",
+            "role": "user"
+        },
+        "car": {
+            "image": "images/fiat_500_model.jpg",
+            "model": "500 model",
+            "car_type": "sedan",
+            "capacity": "5",
+            "doors": "4",
+            "luggage": "1",
+            "transmission": "automatic ",
+            "location": "faisal",
+            "price": "20000 ",
+            "duration": "month",
+            "owner": "sabry",
+            "phone": "01140123116",
+            "plate_number": "14789",
+            "status": "booked"
+        }
+    },
+    {
+        "user": {
+            "first_name": "mohamed",
+            "last_name": "mostafa",
+            "email": "mohamed_mustafa@gmail.com",
+            "phone": "011259963714",
+            "government": "6 October",
+            "password": "123456789iyr",
+            "role": "user"
+        },
+        "car": {
+            "image": "images/ford_focus.jpg",
+            "model": "Ford Focus",
+            "car_type": "Economy",
+            "capacity": "5",
+            "doors": "4",
+            "luggage": "2",
+            "transmission": "Manual",
+            "location": "Giza",
+            "price": "4600 ",
+            "duration": "week",
+            "owner": "Amal Khaled",
+            "phone": "01087654321",
+            "plate_number": "2021",
             "status": "booked"
         }
     }

@@ -100,7 +100,7 @@ class User:
         # Check if the file part exists and validate the file
         if file.filename == '':
             return "Error: No selected file or file not found."
-    
+        
         # Save the file if allowed
         if User.allowed_file(file.filename):
             filename = secure_filename(file.filename)
@@ -109,20 +109,30 @@ class User:
             image_path = f"images/{filename}"
         else:
             return "Error: File type not allowed. Only images are accepted."
-    
+        
         # Fetch other form data
         model = form_data['model']
-        plate_number = form_data['plate_number']
-        price = f"{form_data['price']} EGP"
+    
+        # Ensure plate_number is numeric
+        try:
+            plate_number = int(form_data['plate_number'])
+        except ValueError:
+            return "Error: Plate number must be a number."
+    
+        # Ensure price is numeric
+        try:
+            price = float(form_data['price'])
+        except ValueError:
+            return "Error: Price must be a valid number."
     
         # Check for duplicate plate numbers
         with open('cars.txt', 'r') as file:
             existing_cars = file.readlines()
             for car in existing_cars:
                 car_details = car.strip().split("|")
-                if car_details[-1] == plate_number:
+                if car_details[-1] == str(plate_number):
                     return "Error: Car with this plate number already exists."
-    
+        
         # Prepare car data for entry and save it
         car_data = {
             "image": image_path,
@@ -133,18 +143,19 @@ class User:
             "luggage": form_data['bags'],
             "transmission": form_data['transmission'],
             "location": form_data['location'],
-            "price": price,
+            "price": str(price),  # Keep as a number and append "EGP" in the view
             "duration": form_data['duration'],
             "owner": form_data['renter_name'],
             "phone": form_data['renter_phone'],
-            "plate_number": plate_number
+            "plate_number": str(plate_number)  # Save as string for consistency in storage
         }
-    
+        
         car_entry = "|".join(car_data.values())
         with open('cars.txt', 'a') as file:
             file.write(car_entry + "\n")
-    
+        
         return None
+
 
 
 

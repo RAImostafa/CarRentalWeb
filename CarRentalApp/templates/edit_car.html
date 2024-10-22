@@ -8,10 +8,11 @@
 <body>
     <div class="container">
         <h1>Edit Car Details</h1>
-        <form action="{{ url_for('edit_car', car_model=car.model) }}" method="post">
+        <form action="{{ url_for('edit_car', car_model=car.model) }}" method="post" enctype="multipart/form-data">
             <div class="form-group full-width">
-                <label for="image">Image Path:</label>
-                <input type="text" id="image" name="image" value="{{ car.image }}" required>
+                <label for="image_path">Image Upload:</label>
+                <input type="file" id="image_path" name="image_path" accept="image/*">
+                <small>Current Image:  <img src="{{ url_for('static', filename=car.image) }}" alt="Current Car Image" style="width: 200px; height: auto;"></small>
             </div>
     
             <div class="form-group">
@@ -56,13 +57,11 @@
     
             <div class="form-group">
                 <label for="duration">Duration:</label>
-                 <select id="duration" name="duration" required>
-                     <option value="week">Week</option>
-                     <option value="2 weeks">2 Weeks</option>
-                     <option value="month">Month</option>
-                 </select>
-
-                <input type="text" id="duration" name="duration" value="{{ car.duration }}" required>
+                <select id="duration" name="duration" required>
+                    <option value="week" {% if car.duration == 'week' %}selected{% endif %}>Week</option>
+                    <option value="2 weeks" {% if car.duration == '2 weeks' %}selected{% endif %}>2 Weeks</option>
+                    <option value="month" {% if car.duration == 'month' %}selected{% endif %}>Month</option>
+                </select>
             </div>
     
             <div class="form-group full-width">
@@ -76,8 +75,8 @@
             </div>
             
             <div class="form-group">
-            <label for="plate_number">Plate Number:</label>
-            <input type="text" id="plate_number" name="plate_number" value="{{ car.plate_number }}" readonly>
+                <label for="plate_number">Plate Number:</label>
+                <input type="text" id="plate_number" name="plate_number" value="{{ car.plate_number }}" readonly>
             </div>
             <button type="submit">Save Changes</button>
         </form>

@@ -44,3 +44,4 @@ function deleteCar(model) {
         alert('An error occurred while deleting the car.');
     });
 }
+
