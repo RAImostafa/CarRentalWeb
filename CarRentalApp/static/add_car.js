@@ -1,5 +1,6 @@
 // Function to validate the form before submission
-function validateForm(event) {
+
+function validateForm() {
     event.preventDefault(); // Prevent the default form submission
     const imagePath = document.getElementById('image_path').value;
     const model = document.getElementById('model').value;
@@ -22,11 +23,19 @@ function validateForm(event) {
         alert("Please fill in all fields.");
         return;
     }
+
+    // Validate plate number (should be 5 digits)
+    if (!/^\d{5}$/.test(plateNumber)) {
+        alert("Plate number must be exactly 5 digits.");
+        return;
+    }
+
+    // Validate price (should be a positive number)
+    if (parseFloat(price) <= 0) {
+        alert("Price must be a positive number.");
+        return;
+    }
+
     document.querySelector('form').submit();
 }
 
-// Event listener for form submission
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
-    form.addEventListener('submit', validateForm);
-});

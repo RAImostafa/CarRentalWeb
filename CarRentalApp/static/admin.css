@@ -164,3 +164,10 @@ cursor: pointer;
 font-size: 1.1em;
 transition: background-color 0.3s ease;
 }
+
+
+.error-message {
+    color: red;
+    font-size: 30px; /* Adjust this size as needed */
+    margin: 40px 0;
+}

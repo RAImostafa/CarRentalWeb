@@ -78,8 +78,9 @@
                 <label for="plate_number">Plate Number:</label>
                 <input type="text" id="plate_number" name="plate_number" value="{{ car.plate_number }}" readonly>
             </div>
-            <button type="submit">Save Changes</button>
+            <button type="button" class="submit-button" onclick="validateEditCarForm()">Save Changes</button>
         </form>
     </div>
+    <script src="{{ url_for('static', filename='edit_car.js') }}" defer></script>
 </body>
 </html>

@@ -1,9 +1,3 @@
-
-
-
-
-
-
 function signOut() {
     fetch('/sign_out', {
         method: 'POST',

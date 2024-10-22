@@ -1,6 +1,6 @@
-images/chevrolet_aveo.jpg|Chevrolet Aveo|Economy|5|4|2|Automatic|7 El-Nozha|900000|week|Ahmed Mahmoud|01012345678|1234
+images/chevrolet_aveo.jpg|Chevrolet Aveo|Economy|5|4|2|Automatic|7 El-Nozha|900000|week|Ahmed Mahmoud|0255956698|1234
 images/fiat_500_model.jpg|Toyota Corolla|Standard|5|4|2|Automatic|Abbasia|90000|week|Mariam Ahmed|01098765432|5678
-images/Kia Sportage.avif|Kia Sportage|SUV|5|4|4|Automatic|60 Maadi|8000 |week|Nada Ibrahim|01123456789|1617
+images/Kia Sportage.avif|Kia Sportage|SUV|5|4|4|Automatic|60 Maadi|8000|week|Nada Ibrahim|01123456789|1617
 images/Hyundai Elantra.webp|Hyundai Elantra|Standard|5|4|2|Automatic|New Cairo|20000 |2 weeks|Hassan Ali|01298765432|1819
 images/ford_focus.jpg|Ford Focus|Economy|5|4|2|Manual|Giza|4600 |week|Amal Khaled|01087654321|2021
 images/GMC2017.jpg|GMC 2017|SUV|7|5|4|Automatic|Nozha|20000 |week|Rania Mostafa|01150147789|2223
@@ -11,4 +11,7 @@ images/fiat2023.jpg|Fiat 500|Hatchback|4|2|2|Automatic|Zamalik|20000 |2 weeks|Ma
 images/Camry-Hybrid-Exterior_copy_1200x800-1170x780.jpg|Hybrid 2022|midsize sedan|4|4|6600 |Automatic|west El balad |900000|week|Marwan mahmoud|0145789644|14566
 images/Geely-Binrui-2.jpg|Geely Binrui|sedan|5|4|1|automatic |faisal|20000 |month|sabry|01140123116|12345
 images/fiat_500_model.jpg|500 model|sedan|5|4|1|automatic |faisal|20000 |month|sabry|01140123116|14789
-images/fiat_500_model.jpg|500 model|sedan|5|4|1|automatic |faisal|900014.0|week|sabry|01140123116|147899
+images/fiat_500_model.jpg|500 model|sedan|5|4|1|automatic |faisal|900014.0|week|sabry|01140123116|1478
+images/audi_r8.jpg|Hybrid 2022|sedan|5|4|1|automatic |maadi|900014.0|month|sabry|01140123116|1478
+images/kia_rio_2012.jpg|kia rio 2012|Hatchback|5|4|2|automatic |maadi|900014.0|week|sabry|01140123116|12365
+images/fiat_500_model.jpg|kia rio 2012|Hatchback|5|4|2|automatic |maadi|900014.0|week|sabry|01140123116|14567

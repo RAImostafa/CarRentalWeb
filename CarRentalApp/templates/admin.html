@@ -24,9 +24,11 @@
 
     <!-- Display Error Message if exists -->
     {% if error_message %}
-        <div class="error-message" style="color: red; margin: 20px 0;">
-            {{ error_message }}
-        </div>
+    <div class="error-message">
+        {{ error_message }}
+        <br>
+        <a href="{{ url_for('admin_page') }}" style="color: blue; font-size: 20px;">Go to Admin Page</a>
+    </div>
    
     {% else %}
     <div class="all-cars-title">All Cars</div>
