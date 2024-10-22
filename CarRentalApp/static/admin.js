@@ -17,19 +17,19 @@ function signOut() {
     });
 }
 
-function deleteCar(model) {
+function deleteCar(plateNumber) {
     fetch('/delete_car', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ model: model })
+        body: JSON.stringify({ plate_number: plateNumber })  // Use plate_number instead of model
     })
     .then(response => response.json())
     .then(data => {
         if (data.success) {
             alert(data.message);
-            location.reload(); // Refreshes the page
+            location.reload(); // Refresh the page
         } else {
             alert(data.message);
         }
@@ -38,4 +38,5 @@ function deleteCar(model) {
         alert('An error occurred while deleting the car.');
     });
 }
+
 

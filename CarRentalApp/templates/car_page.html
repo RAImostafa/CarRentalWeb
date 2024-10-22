@@ -11,8 +11,8 @@
     <div class="car-details-container">
         <div class="car-info">
             <h1>Car Details</h1>
-            <h2>{{ car.model }} - {{ car.year }}</h2>
-            <p><strong>Type:</strong> {{ car.type }}</p>
+            <h2>{{ car.model }}</h2>
+            <p><strong>Type:</strong> {{ car.model  }}</p>
             <p><strong>Capacity:</strong> {{ car.capacity }} people</p>
             <p><strong>Doors:</strong> {{ car.doors }}</p>
             <p><strong>Luggage:</strong> {{ car.luggage }} bags</p>
@@ -25,10 +25,11 @@
             <p><strong>Plate Number:</strong> {{ car.plate_number }}</p>
         </div>
         <div class="car-image-container">
-            <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.model }}" class="car-image">
+            <img src="{{ url_for('static', filename=car.image) }}" alt="{{  car.plate_number }}" class="car-image">
         </div>
         <div class="book-button-container">
-            <button id="book-button" class="book-button" onclick="bookCar('{{ car.model }}')">Book Now</button>
+            <button id="book-button" class="book-button" onclick="bookCar('{{ car.plate_number }}')">Book Now</button>
+
         </div>
     </div>
    

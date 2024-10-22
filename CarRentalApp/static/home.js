@@ -98,7 +98,24 @@ function toggleFilter() {
 
 
 
-
+function signOut() {
+    fetch('/sign_out', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    .then(response => {
+        if (response.redirected) {
+            window.location.href = response.url;
+        } else {
+            alert('Sign out failed.');
+        }
+    })
+    .catch(() => {
+        alert('An error occurred while signing out.');
+    });
+}
 
 
 

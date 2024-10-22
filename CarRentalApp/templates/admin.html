@@ -36,7 +36,7 @@
         <div class="car-listings">
             {% for car in cars %}
             <div class="car" data-model="{{ car.model }}">
-                <div class="delete-button" onclick="deleteCar('{{ car.model }}')">x</div>
+                <div class="delete-button" onclick="deleteCar('{{ car.plate_number }}')">x</div>
                 <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.model }}">
                 <h3>{{ car.model }}</h3>
                 <p>Location: {{ car.location }}</p>

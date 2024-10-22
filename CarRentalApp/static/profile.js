@@ -28,13 +28,13 @@ function signOut() {
     });
 }
 
-function deleteBooking(carModel) {
+function deleteBooking(plateNumber) {
     fetch('/delete_booking', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ car_model: carModel })
+        body: JSON.stringify({ plate_number: plateNumber }) // Use plate_number instead of car_model
     })
     .then(response => response.json())
     .then(data => {
@@ -45,4 +45,3 @@ function deleteBooking(carModel) {
         alert('An error occurred while deleting the booking.');
     });
 }
-

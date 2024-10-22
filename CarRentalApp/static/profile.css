@@ -32,13 +32,14 @@ body {
 
 .icon-container {
     position: absolute;
+     margin-left: 50px;
     right: 40px;
     display: flex;
     align-items: center;
 }
 
 .icon-container a {
-    margin-left: 10px;
+    margin-left: 20px; /* Increase margin to add more space between icons */
 }
 
 .icon {
@@ -47,12 +48,12 @@ body {
     border-radius: 50%;
     transition: transform 0.2s;
     cursor: pointer;
-   
 }
 
 .icon:hover {
     transform: scale(1.1);
 }
+
 
 .content {
     flex: 1;

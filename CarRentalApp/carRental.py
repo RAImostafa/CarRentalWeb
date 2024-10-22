@@ -86,6 +86,7 @@ def index():
     return render_template('index.html')
 
 
+
 @app.route('/home')
 def home():
     welcome_message = ""
@@ -94,35 +95,38 @@ def home():
         users = User.get_list()
         for user in users:
             if user['email'] == email:
-                #welcome_message = f"Welcome back, {user['first_name']}!"
                 welcome_message = f"Welcome back, {user.get('first_name', 'User')}!"
 
     current_datetime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     cars = Car.get_cars()
-    
+
     try:
         with open("booked_cars.json", "r") as file:
             bookings = json.load(file)
-            booked_models = {booking['car']['model']: booking['car'] for booking in bookings}
+            booked_plate_numbers = {booking['car']['plate_number'] for booking in bookings}
     except FileNotFoundError:
-        booked_models = {}
+        booked_plate_numbers = set()
 
+    # Update each car's status based on the plate number
     for car in cars:
-        if car.model in booked_models:
-            car.status = booked_models[car.model].get('status')
+        if car.plate_number in booked_plate_numbers:
+            car.status = 'booked'
+        else:
+            car.status = 'available'  # Set default status for unbooked cars
 
     return render_template('Home.html', welcome_message=welcome_message, current_datetime=current_datetime, cars=cars)
 
 
-
-@app.route('/car/<car_model>')
-def car(car_model):
+@app.route('/car/<plate_number>')
+def car(plate_number):
     cars = Car.get_cars()
-    selected_car = next((car for car in cars if car.model == car_model), None)
+    selected_car = next((car for car in cars if car.plate_number == plate_number), None)
     if not selected_car:
         return "Car not found", 404
 
     return render_template('car_page.html', car=selected_car)
+
+
 
 
 @app.route('/book_car', methods=['POST'])
@@ -136,15 +140,13 @@ def book_car():
     if not user:
         return jsonify({"message": "User not found"}), 404
 
-    car_model = request.json['car_model']
-    booking_info, message = Car.book_car(user, car_model)
+    plate_number = request.json['plate_number']  # Use plate_number
+    booking_info, message = Car.book_car(user, plate_number)
 
     if not booking_info:
         return jsonify({"message": message}), 404 if message == "Car not found" else 409
 
     return jsonify({"message": message}), 200
-
-
 
 @app.route('/delete_booking', methods=['POST'])
 def delete_booking():
@@ -152,11 +154,10 @@ def delete_booking():
         return jsonify({"message": "User not logged in"}), 401
 
     email = session['user_id']
-    car_model = request.json['car_model']
+    plate_number = request.json['plate_number']  # Change to get plate_number
 
-    message = Car.delete_booking(email, car_model)
+    message = Car.delete_booking(email, plate_number)  # Pass plate_number instead of car_model
     return jsonify({"message": message}), 200
-
 
 
 
@@ -186,39 +187,39 @@ def add_car():
             return redirect(url_for('admin_page'))
     return render_template('add_car.html', message=message)
 
+
 @app.route('/admin/remove_booking', methods=['POST'])
 def remove_booking():
-    car_model = request.form['model']
-    User.remove_booking(car_model)
+    car_plate = request.form['plate_number']
+    User.remove_booking(car_plate)
     return redirect(url_for('admin_page'))
 
 
 @app.route('/delete_car', methods=['POST'])
 def delete_car():
     data = request.get_json()
-    model_to_delete = data.get('model')
+    plate_number_to_delete = data.get('plate_number')  # Now using plate number
 
     # Check if the car is booked
     booked_cars = User.get_booked_cars()
     for bookings in booked_cars.values():
         for booking in bookings:
-            if booking['car']['model'] == model_to_delete:
+            if booking['car']['plate_number'] == plate_number_to_delete:
                 return jsonify({"success": False, "message": "Cannot delete a booked car."})
 
     # Proceed to delete if not booked
-    car_deleted = User.delete_car(model_to_delete)
+    car_deleted = User.delete_car(plate_number_to_delete)
     if car_deleted:
         return jsonify({"success": True, "message": "Car removed successfully."})
     else:
         return jsonify({"success": False, "message": "Car not found."})
 
 
+
 @app.route('/booked_cars')
 def booked_cars():
     grouped_bookings = User.get_booked_cars()
     return render_template('booked_cars.html', grouped_bookings=grouped_bookings)
-
-
 
 
 
@@ -278,6 +279,7 @@ def edit_car(car_model):
         return render_template('edit_car.html', car=selected_car)
     
     return redirect(url_for('home'))
+
 
 
 

@@ -27,6 +27,11 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
 filter: drop-shadow(0px 12px 24px rgba(16, 76, 139, 0.16));
 }
 
+
+.filter-image:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 .search-container {
     display: flex;
     align-items: center;
@@ -56,7 +61,7 @@ filter: drop-shadow(0px 12px 24px rgba(16, 76, 139, 0.16));
 
 .profile-link {
     margin-left: 50px;
-    margin-right: 50px;
+    margin-right: 20px;
     cursor: pointer;
 }
 
@@ -66,6 +71,19 @@ filter: drop-shadow(0px 12px 24px rgba(16, 76, 139, 0.16));
     border-radius: 50%;
     transition: transform 0.2s;
     cursor: pointer;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.icon:hover {
+    transform: scale(1.1);
 }
 
 .profile-image:hover {

@@ -4,7 +4,7 @@ import os
 from flask import session
 from werkzeug.utils import secure_filename
 
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'avif'}
 
 class User:
     def __init__(self, first_name, last_name, email, phone, government, password, role="user"):
@@ -95,6 +95,7 @@ class User:
                     return None, user['first_name'], 'home'
         return "Invalid email or password", None, None
     
+    
     @staticmethod
     def add_car(form_data, file):
         # Check if the file part exists and validate the file
@@ -110,8 +111,6 @@ class User:
         else:
             return "Error: File type not allowed. Only images are accepted."
         
-        # Fetch other form data
-        model = form_data['model']
     
         # Ensure plate_number is numeric
         try:
@@ -136,7 +135,7 @@ class User:
         # Prepare car data for entry and save it
         car_data = {
             "image": image_path,
-            "model": model,
+            "model": form_data['model'],
             "type": form_data['car_type'],
             "capacity": form_data['seats'],
             "doors": form_data['doors'],
@@ -158,28 +157,31 @@ class User:
 
 
 
-
     @staticmethod
-    def remove_booking(car_model):
+    def remove_booking(car_plate):
         with open('booked_cars.json', 'r') as file:
             bookings = json.load(file)
-        bookings = [booking for booking in bookings if booking['car']['model'] != car_model]
+        # Filter bookings based on the unique car plate number
+        bookings = [booking for booking in bookings if booking['car']['plate_number'] != car_plate]
         with open('booked_cars.json', 'w') as file:
             json.dump(bookings, file, indent=4)
 
+
     @staticmethod
-    def delete_car(model_to_delete):
+    def delete_car(plate_number_to_delete):
         car_deleted = False
         # Remove from cars.txt
         with open('cars.txt', 'r') as file:
             cars = file.readlines()
+        
         with open('cars.txt', 'w') as file:
             for car in cars:
-                if model_to_delete not in car:
+                # Assuming each line contains car details and plate_number as one of the fields
+                if plate_number_to_delete not in car:
                     file.write(car)
                 else:
                     car_deleted = True
-
+        
         # Remove from booked_cars.json if it exists
         if car_deleted:
             try:
@@ -187,12 +189,14 @@ class User:
                     booked_cars = json.load(file)
             except FileNotFoundError:
                 booked_cars = []
-
-            new_booked_cars = [car for car in booked_cars if car['car']['model'] != model_to_delete]
+            
+            new_booked_cars = [car for car in booked_cars if car['car']['plate_number'] != plate_number_to_delete]
+            
             with open('booked_cars.json', 'w') as file:
                 json.dump(new_booked_cars, file, indent=4)
-
+        
         return car_deleted
+
 
     @staticmethod
     def get_booked_cars():

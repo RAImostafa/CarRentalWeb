@@ -19,6 +19,9 @@
                 <a href="{{ url_for('profile') }}" title="User Profile" class="profile-link">
                     <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-image">
                 </a>
+                <a href="#" onclick="signOut()" title="Sign Out">
+                    <img src="{{ url_for('static', filename='images/log_out.svg') }}" alt="Sign Out Icon" class="icon">
+                </a>
             </div>
         </div>
     </header>
@@ -32,13 +35,14 @@
             <span id="filterLabel" class="filter-label"></span>
         </div>
     </div>
+
     <div class="container">
         <!-- Monthly Rentals Section -->
         <section class="rentals-section" id="monthly-rentals">
             <h2>Monthly Rentals</h2>
             <div class="car-listings">
                 {% for car in cars if car.duration == 'month' %}
-                <a href="/car/{{ car.model }}" class="car-link">
+                <a href="/car/{{ car.plate_number }}" class="car-link">
                     <div class="car-card">
                         <div class="car-image-container">
                             <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.model }}" class="car-image">
@@ -55,12 +59,13 @@
                 {% endfor %}
             </div>
         </section>
+
         <!-- Two-Week Rentals Section -->
         <section class="rentals-section" id="two-week-rentals">
             <h2>Two-Week Rentals</h2>
             <div class="car-listings">
                 {% for car in cars if car.duration == '2 weeks' %}
-                <a href="/car/{{ car.model }}" class="car-link">
+                <a href="/car/{{ car.plate_number }}" class="car-link"> <!-- Corrected link to use car.plate_number -->
                     <div class="car-card">
                         <div class="car-image-container">
                             <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.model }}" class="car-image">
@@ -77,12 +82,13 @@
                 {% endfor %}
             </div>
         </section>
+
         <!-- Weekly Rentals Section -->
         <section class="rentals-section" id="weekly-rentals">
             <h2>Weekly Rentals</h2>
             <div class="car-listings">
                 {% for car in cars if car.duration == 'week' %}
-                <a href="/car/{{ car.model }}" class="car-link">
+                <a href="/car/{{ car.plate_number }}" class="car-link"> <!-- Corrected link to use car.plate_number -->
                     <div class="car-card">
                         <div class="car-image-container">
                             <img src="{{ url_for('static', filename=car.image) }}" alt="{{ car.model }}" class="car-image">
@@ -100,11 +106,13 @@
             </div>
         </section>
     </div>
+
     <footer class="footer">
         <marquee behavior="scroll" direction="left">
             Contact us for any problem: <strong>(+20) 1150125119</strong>
         </marquee>
     </footer>
+    
     <script src="{{ url_for('static', filename='home.js') }}" defer></script>
 </body>
 </html>

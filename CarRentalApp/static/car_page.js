@@ -1,11 +1,11 @@
-async function bookCar(carModel) {
+async function bookCar(plateNumber) {
     try {
         const response = await fetch('/book_car', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ car_model: carModel })
+            body: JSON.stringify({ plate_number: plateNumber }) // Use plate_number instead of car_model
         });
 
         const data = await response.json();
@@ -27,3 +27,4 @@ async function bookCar(carModel) {
         alert("An error occurred. Please try again.");
     }
 }
+

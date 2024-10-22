@@ -40,8 +40,7 @@
                         <h3>{{ booking.model }}</h3>
                         <p><strong>Location:</strong> {{ booking.location }}</p>
                         <p><strong>Price:</strong> {{ booking.price }}</p>
-                        <button class="cancel-booking-button" onclick="deleteBooking('{{ booking.model }}')">Cancel Booking</button>
-                        <!--<button onclick="deleteBooking('{{ booking.model }}')">Cancel Booking</button>-->
+                        <button class="cancel-booking-button" onclick="deleteBooking('{{ booking.plate_number }}')">Cancel Booking</button>
                     </div>
                     {% endfor %}
                     {% if booked_cars|length == 0 %}
