@@ -1,55 +1,28 @@
 [
     {
         "user": {
-            "first_name": "mohamed",
-            "last_name": "mostafa",
-            "email": "mohamed_mustafa@gmail.com",
-            "phone": "011259963714",
-            "government": "6 October",
-            "password": "123456789iyr",
-            "role": "user"
-        },
-        "car": {
-            "image": "images/mercedes-c-class-2015-hero.jpg",
-            "model": " 2024 1.6L Vision A/T",
-            "car_type": "SUV",
-            "capacity": "5",
-            "doors": "4",
-            "luggage": "8",
-            "transmission": "Automatic",
-            "location": "Zamalik",
-            "price": "1000.0",
-            "duration": "week",
-            "owner": "basma aly",
-            "phone": "0356666236",
-            "plate_number": "45896",
-            "status": "booked"
-        }
-    },
-    {
-        "user": {
             "first_name": "rania",
             "last_name": "mustafa",
             "email": "rania.mustafa1972@gmail.com",
             "phone": "01150125119",
             "government": "Maadi",
-            "password": "123456789asd",
+            "password": "asd123456789",
             "role": "user"
         },
         "car": {
-            "image": "images/ford_focus.jpg",
-            "model": "Ford Explorer 2024",
-            "car_type": "SUV",
+            "image": "images/audi_r8.jpg",
+            "model": "Audi R8",
+            "car_type": "Sedan",
             "capacity": "5",
             "doors": "4",
-            "luggage": "8",
+            "luggage": "1",
             "transmission": "Automatic",
-            "location": "Zamalik",
-            "price": "10000",
+            "location": "Maadi",
+            "price": "90000",
             "duration": "month",
-            "owner": "Basma Aly",
-            "phone": "0356666236",
-            "plate_number": "45592",
+            "owner": "Sabry Ahmed",
+            "phone": "01140123116",
+            "plate_number": "25896",
             "status": "booked"
         }
     }

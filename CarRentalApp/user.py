@@ -4,7 +4,7 @@ import os
 from flask import session
 from werkzeug.utils import secure_filename
 
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'avif'}
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'avif' , 'webp'}
 
 class User:
     def __init__(self, first_name, last_name, email, phone, government, password, role="user"):
@@ -54,6 +54,7 @@ class User:
         users = User.get_list()
         return next((u for u in users if u['email'] == session['user_id'] and u.get('role') == 'admin'), None)
     
+
     @classmethod
     def sign_up(cls, form_data):
         first_name = form_data['first_name']
@@ -62,23 +63,35 @@ class User:
         phone = form_data['phone']
         government = form_data['government']
         password = form_data['password']
-
-        # Validation
-        if not email.endswith('.com'):
-            return "Email must end with '.com'", None
+        
+        # Email validation
+        if '@' not in email or not email.endswith('.com'):
+            return "Email must contain '@' and end with '.com'", None
+    
+        # Phone number validation
+        if not phone.isdigit() or len(phone) != 11 or not phone.startswith('0'):
+            return "Phone number must be positive 11 digits, start with '0', and contain only numbers", None
+    
+        # Password validation
         if len(password) < 8 or ',' in password or not any(char.isalpha() for char in password):
-            return "Password must be at least 8 characters contain letter", None
-
+            return "Password must be at least 8 characters and contain a letter", None
+    
+        # Check if email already exists
         users = cls.get_list()
         for user in users:
             if user["email"].lower().strip() == email:
                 return "Email already exists", None
-
+    
         # Create new user and save
         new_user = cls(first_name, last_name, email, phone, government, password)
         new_user.save_to_file()
         session['user_id'] = email
         return None, new_user
+    
+        
+    
+    
+    
 
     @classmethod
     def sign_in(cls, form_data):

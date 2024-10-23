@@ -64,6 +64,8 @@ def sign_out():
 @app.route('/home')
 def home():
     welcome_message = ""
+    if 'user_id' not in session:
+        return redirect(url_for('sign_in'))
     if 'user_id' in session:
         email = session['user_id']
         users = User.get_list()
@@ -176,6 +178,8 @@ def admin_page():
 @app.route('/add_car', methods=['GET', 'POST'])
 def add_car():
     message = ""
+    if 'user_id' not in session:
+         return redirect(url_for('sign_in'))
     if request.method == 'POST':
         file = request.files['image_path']
         form_data = request.form
@@ -214,6 +218,8 @@ def delete_car():
 # List booked cars: Displays the list of booked cars in the admin view
 @app.route('/booked_cars')
 def booked_cars():
+    if 'user_id' not in session:
+        return redirect(url_for('sign_in'))
     grouped_bookings = User.get_booked_cars()
     return render_template('booked_cars.html', grouped_bookings=grouped_bookings)
 

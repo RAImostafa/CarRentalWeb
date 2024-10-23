@@ -18,3 +18,4 @@ images/2002_dodge.jpg|Dodge Ram 2002|truck|4|2|5|Automatic|Mokkatam |700000.0|mo
 images/blue_MBW_M3CSL.jpg|BMW M3 CSL gen7| Coupe 3R|4|2|1|Automatic|Mokkatam |100012|2 weeks|basma aly|01150125119|55527
 images/Camry-Hybrid-Exterior_copy_1200x800-1170x780.jpg|camry |sedan|5|4|2|Automatic|Mokkatam |10000.0|week|Mohamed abdelfata7|01150125115|55530
 images/bmw_3series.jpg|BMW M3 CSL gen5|SUV|5|4|2|Automatic|Mokkatam |10000.0|2 weeks|Mohamed abdelfata7|01150125115|55531
+images/byd-seal-review-2023-001.webp|Byd seal 2023|seal|4|2|1|Automatic|Al haram |100000.0|2 weeks|Mohamed abdelfata7|01150125115|55539

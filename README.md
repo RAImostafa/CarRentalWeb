@@ -29,56 +29,58 @@ Make sure you have the following:
 
 -[✔️] It contains at least one class written by you that has both properties and methods. It uses __init__() to let the class initialize the object's attributes (note that __init__() doesn't count as a method). This includes instantiating the class and using the methods in your app. 
                 1- File name for the class definition: car.py and user.py
-                2-For the User class in user.py:
+                2-For the User class in *user.py*:
                     Line number(s) for the class definition: Line 9 
                     Name of two properties: first_name, email
                     Name of two methods: sign_up(), sign_in()
-                    File name and line numbers where the methods are used:
+                    File name and line numbers where the methods *are used*:
                     File name: carRental.py
-                    Line numbers for sign_up(): Line 16 (inside the /sign_up route).
-                    Line numbers for sign_in(): Line 33 (inside the /sign_in route).
-                2-For the Car class in car.py:
+                    Line numbers for sign_up(): Line 20 (inside the /sign_up route).
+                    Line numbers for sign_in(): Line 38 (inside the /sign_in route).
+                2-For the Car class in *car.py*:
                     File name for the class definition: car.py
                     Line number(s) for the class definition: Line 2
                     Name of two properties: model, car_type
-                    Name of two methods: get_cars(), book_car()
+                    Name of two methods: get_cars(), book_car(user, plate_number)
                     File name and line numbers where the methods are used:
-                    File name: carrental.py
-                    Line numbers for get_cars(): Used in the /home route at line 95, /car/<car_model> route 114,/admin_page route at line 165 .
-                    Line numbers for book_car(): Used in the /book_car route at line 134.
+                    File name: carRental.py
+                    Line numbers for get_cars(): Used in the /home route at line 77, /car/<plate_number> route 122,/admin_page route at line 171.
+                    Line numbers for book_car(user, plate_number): Used in the /book_car route at line 142.
 
 -[✔️] It makes use of JavaScript in the front end and uses the localStorage of the web browser.
                 1-"localStorage" is used in signup.js at line 3
 
 -[✔️] It uses modern JavaScript (for example, let and const rather than var).
-                1-const is used in "profile.js" at line 2,3 
-                2-let is used in "home.js" at line 66 ,67
-                3-Arrow function for DOMContentLoaded event listener in "add_car.js" at line 30
+                1-const is used in "profile.js" at line 3,4 
+                2-let is used in "home.js" at line 64 ,65
 
 -[✔️] It makes use of the reading and writing to the same file feature.
                 cars.txt
-                1- in the admin can *ADD* a car by func add_car() at line 99 , in "user.py" 
+                1- in the admin can *ADD* a car by func add_car(form_data, file) at line 113 , in "user.py" 
                 2- cars can be *READ* through get_cars() at line 19 , in "car.py"
-                3-admin can *DELETE* a car too by func delete_car(model_to_delete) at line 156 , in "user.py" 
-                4-admin can *EDIT* a car too by func edit_car(car_model) at line 212 , in "carRental.py" 
+                3-admin can *DELETE* a car too by func delete_car(plate_number_to_delete) at line 184 , in "user.py" 
+                4-admin can *EDIT* a car too by func edit_car(plate_number) at line 230 , in "carRental.py" 
 
 -[✔️] It contains conditional statements.
-                file name : carRental.py
-                lines:
+                 -file name : carRental.py
+                 -lines:22,32,40,46,67,....
+                 -file name : car.py
+                 -lines:22,30,31,43,....
+                 -file name : user.py
+                 -lines:55,68,72,76,82,103,...
 
--[✔️] It contains loops. Please provide below the file name
-and the line number(s) of at least
-                 one example of a loop in your code.
+-[✔️] It contains loops. Please provide below the file name and the line number(s) of at least one example of a loop in your code.
                  - File name:carRental.py
-                 - Line number(s):58,66,115,129
+                 - Line number(s):72,82,87,102,110,...
                  - File name:user.py
-                 - Line number(s):55,69,73,89,121,151,162,176,...
+                 - Line number(s):55,77,81,107,143,...
                  - File name:car.py
-                 - Line number(s):22,23,29,40,63
+                 - Line number(s):22,32,43,73,...
 
 -[✔️] It lets the user enter a value in a text box at some point This value is received and processed by your back end Python code.
                 - used in Sign in and sign up fileds 
                 -Adding car by admin
+                -Editing car by admin
                 -searching 
 
 -[✔️] It doesn't generate any error message even if the user enters a wrong input.
@@ -92,4 +94,37 @@ or experimental code. In particular, the code should not use print() or console.
 -[✔️] All exercises have been completed as per the requirements and pushed to the respective GitHub repository
 
 
-## Car rental Website SS :
+
+## Car Rental Website Screenshots:
+
+### Welcome Page
+![Welcome Page Screenshot](screenshots/index%20page.png)
+
+### Sign-Up Page
+![Sign-Up Page Screenshot](screenshots/sign%20up.png)
+
+### Sign-In Page
+![Sign-In Page Screenshot](screenshots/sign%20in.png)
+
+### Homepage
+![Homepage Screenshot](screenshots/Home.png)
+
+### Car Page
+![Car Page Screenshot](screenshots/Car_page.png)
+
+### User Profile Page
+![User Profile Page Screenshot](screenshots/User%20profile.png)
+
+## Admin Features:
+
+### Admin Page 
+![Admin Page Screenshot](screenshots/Admin%20page.png)
+
+### Admin Add Car Page 
+![Admin Add Car Page Screenshot](screenshots/Add%20Car%20page.png)
+
+### Admin Edit Car Details Page 
+![Admin Edit Car Page Screenshot](screenshots/Edit%20Car%20details%20page.png)
+
+### Booked Cars Page 
+![Booked Cars Page Screenshot](screenshots/Booked%20Cars%20page.png)

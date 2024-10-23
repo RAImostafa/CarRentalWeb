@@ -5,93 +5,21 @@
         "role": "admin"
     },
     {
-        "first_name": "John",
-        "last_name": "Doe",
-        "email": "john.doe@example.com",
-        "phone": "123456789",
+        "first_name": "rania",
+        "last_name": "mustafa",
+        "email": "rania.mustafa1972@gmail.com",
+        "phone": "01150125119",
         "government": "Maadi",
-        "password": "password123",
+        "password": "asd123456789",
         "role": "user"
     },
     {
-        "first_name": "Jane",
-        "last_name": "Smith",
-        "email": "jane.smith@example.com",
-        "phone": "987654321",
-        "government": "Cairo",
-        "password": "password456",
-        "role": "user"
-    },
-    {
-        "first_name": "mahmoud",
-        "last_name": "aky",
-        "email": "mahmoud.mohamed@gmail.com",
-        "phone": "011259963714",
-        "government": "Tahrir Sqaure",
-        "password": "123456789ASD",
-        "role": "user"
-    },
-    {
-        "first_name": "sara",
+        "first_name": "saraa",
         "last_name": "salah",
-        "email": "sara_salah895@gmail.com",
-        "phone": "01150125119",
-        "government": "helwan",
-        "password": "123456789aa",
-        "role": "user"
-    },
-    {
-        "first_name": "reem",
-        "last_name": "mostafa",
-        "email": "rania.mustafa123@gmail.com",
-        "phone": "01150125119",
-        "government": "helwan",
-        "password": "123456789ASD",
-        "role": "user"
-    },
-    {
-        "first_name": "ahmed",
-        "last_name": "shwaqy",
-        "email": "ahmad_shaw2e@gmail.com",
-        "phone": "01150125119",
-        "government": "zamalik",
-        "password": "ASD123456789",
-        "role": "user"
-    },
-    {
-        "first_name": "belal",
-        "last_name": "sryo",
-        "email": "belal@gmail.com",
-        "phone": "1122233344",
-        "government": "Gia",
-        "password": "12345abc78",
-        "role": "user"
-    },
-    {
-        "first_name": "rania",
-        "last_name": "mustafa",
-        "email": "rania.mustafa1792@gmail.com",
-        "phone": "01150125119",
-        "government": "Giza",
-        "password": "123456789as",
-        "role": "user"
-    },
-    {
-        "first_name": "mohamed",
-        "last_name": "mostafa",
-        "email": "mohamed_mustafa@gmail.com",
-        "phone": "011259963714",
-        "government": "6 October",
-        "password": "123456789iyr",
-        "role": "user"
-    },
-    {
-        "first_name": "rania",
-        "last_name": "mustafa",
-        "email": "rania.mustafa1793@gmail.com",
-        "phone": "01150125119",
+        "email": "sara.salah@gmail.com",
+        "phone": "01123456789",
         "government": "Maadi",
-        "password": "1234566789asd",
+        "password": "123456789asd",
         "role": "user"
     }
 ]

@@ -14,15 +14,21 @@ function validateEditCarForm() {
     const phone = document.getElementById('phone').value;
 
     // Ensure all required fields are filled
-    if ( !model ||!carType || !capacity || !doors || !luggage || !transmission || !location || 
+    if (!model || !carType || !capacity || !doors || !luggage || !transmission || !location || 
         !price || !duration || !owner || !phone) {
         alert("Please fill in all required fields.");
         return false;
     }
 
-    // Ensure price is a positive number and at least 3 digits
+    // Ensure price is a positive number and at least 4 digits
     if (parseFloat(price) < 1000) {
-        alert("Price must be at least four digits.");
+        alert("Price must be at least four digits and positive number.");
+        return false;
+    }
+
+    // Validate phone number (should be 11 digits, start with 0, no letters)
+    if (!/^[0]\d{10}$/.test(phone)) {
+        alert("Phone number must be 11 digits and start with 0, with no letters and positive!.");
         return false;
     }
 
