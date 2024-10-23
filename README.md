@@ -28,13 +28,13 @@ Make sure you have the following:
                3-OS
 
 -[✔️] It contains at least one class written by you that has both properties and methods. It uses __init__() to let the class initialize the object's attributes (note that __init__() doesn't count as a method). This includes instantiating the class and using the methods in your app. 
+                
                 1- File name for the class definition: car.py and user.py
                 2-For the User class in *user.py*:
                     Line number(s) for the class definition: Line 9 
                     Name of two properties: first_name, email
                     Name of two methods: sign_up(), sign_in()
                     File name and line numbers where the methods *are used*:
-
                     File name: carRental.py
                     Line numbers for sign_up(): Line 19 (inside the /sign_up route).
                     Line numbers for sign_in(): Line 37 (inside the /sign_in route).
