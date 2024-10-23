@@ -1,36 +1,33 @@
 # CarRentalWeb
-it's a website that helps you to book the cars with a huge variety of models and prices 
+It's a website that helps you to book cars with a huge variety of models and prices.
 
-- What does it do?
-you can book a car or more and cancel the reservation ,it also shows their perices
-and all the car and the owner info
-with an admin that car add a new car or remove a car , watch the booked list and cancel booking.
+## What does it do?
+You can book a car or more and cancel the reservation. It also shows their prices and all the car and owner info. The admin can add new cars, remove cars, view the booked list, and cancel bookings.
 
-- What is the "new feature" which you have implemented that
-we haven't seen before?
-better user profile that contains the car he booked , also deleteing car from the system
-removes it from the booked list in the user's profile 
+## New Feature
+- A better user profile that contains the cars they booked.
+- Deleting a car from the system removes it from the booked list in the user's profile.
 
 ## Prerequisites
-make sure you got this :
-Python: Install Python from the official website: python.org
-Flask: You can install Flask using pip, Python's package installer. Run the following command:  pip install Flask
-Jinja in Visual Studio Code: Ensure you have Visual Studio Code installed. Jinja is a templating engine used by Flask, and it should be integrated 
-into Visual Studio Code by default when you have the Python extension installed.
+Make sure you have the following:
+**Please make sure to run the project inside the `CarRentalApp` folder.**
+- **Python**: Install Python from the official website: [python.org](https://www.python.org)
+- **Flask**: Install Flask using pip, Python's package installer. Run the following command:
+  ```bash
+  pip install Flask
+
 
 ## Project Checklist
 -[✔️] It is available on GitHub. (https://github.com/RAImostafa/CarRentalWeb)
+
 -[✔️] It uses the Flask web framework.
--[✔️] It uses at least one module from the Python Standard
-Library other than the random module.
+
+-[✔️] It uses at least one module from the Python Standard Library other than the random module.
 -Module name: 1-datetime
                2-json
                3-OS
--[✔️] It contains at least one class written by you that has
-both properties and methods. It uses __init__() to let the
-class initialize the object's attributes (note that
-__init__() doesn't count as a method). This includes
-instantiating the class and using the methods in your app. 
+
+-[✔️] It contains at least one class written by you that has both properties and methods. It uses __init__() to let the class initialize the object's attributes (note that __init__() doesn't count as a method). This includes instantiating the class and using the methods in your app. 
                 1- File name for the class definition: car.py and user.py
                 2-For the User class in user.py:
                     Line number(s) for the class definition: Line 9 
@@ -50,8 +47,7 @@ instantiating the class and using the methods in your app.
                     Line numbers for get_cars(): Used in the /home route at line 95, /car/<car_model> route 114,/admin_page route at line 165 .
                     Line numbers for book_car(): Used in the /book_car route at line 134.
 
--[✔️] It makes use of JavaScript in the front end and uses the
-localStorage of the web browser.
+-[✔️] It makes use of JavaScript in the front end and uses the localStorage of the web browser.
                 1-"localStorage" is used in signup.js at line 3
 
 -[✔️] It uses modern JavaScript (for example, let and const rather than var).
@@ -91,10 +87,9 @@ and the line number(s) of at least
 -[✔️] It is styled using your own CSS
 
 -[✔️] The code follows the code and style conventions as introduced in the course, is fully documented using comments and doesn't contain unused 
-or experimental code. In particular, the code should not use print() or
-console.log() for any information the app user should see.
-Instead, all user feedback needs to be visible in the
-browser. 
+or experimental code. In particular, the code should not use print() or console.log() for any information the app user should see. Instead, all user feedback needs to be visible in the browser. 
 
--[✔️] All exercises have been completed as per the
-requirements and pushed to the respective GitHub repository
+-[✔️] All exercises have been completed as per the requirements and pushed to the respective GitHub repository
+
+
+## Car rental Website SS :
