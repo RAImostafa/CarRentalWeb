@@ -42,7 +42,7 @@
                 <p>Location: {{ car.location }}</p>
                 <p>Price: {{ car.price }}</p>
                 <!-- Add the Edit button -->
-                <a href="{{ url_for('edit_car', car_model=car.model) }}" class="edit-button">Edit</a>
+                <a href="{{ url_for('edit_car', plate_number=car.plate_number) }}" class="edit-button">Edit</a>
             </div>
             {% endfor %}
         </div>

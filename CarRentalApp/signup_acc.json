@@ -104,12 +104,21 @@
         "role": "user"
     },
     {
-        "first_name": "saraa",
-        "last_name": "salah",
-        "email": "sara.salah@gmail.com",
-        "phone": "0126056269",
-        "government": "helwan",
-        "password": "qwedsa20304050",
+        "first_name": "rania",
+        "last_name": "mustafa",
+        "email": "rania.mustafa1793@gmail.com",
+        "phone": "01150125119",
+        "government": "Maadi",
+        "password": "1234566789asd",
+        "role": "user"
+    },
+    {
+        "first_name": "rania",
+        "last_name": "mustafa",
+        "email": "rania.mustafa1972@gmail.com",
+        "phone": "01150125119",
+        "government": "Maadi",
+        "password": "123456789asd",
         "role": "user"
     }
 ]

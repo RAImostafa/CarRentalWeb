@@ -1,6 +1,7 @@
 function validateEditCarForm() {
     // Get form values
     const imagePath = document.getElementById('image_path').value;
+    const model = document.getElementById('model').value;
     const carType = document.getElementById('car_type').value;
     const capacity = document.getElementById('capacity').value;
     const doors = document.getElementById('doors').value;
@@ -13,7 +14,7 @@ function validateEditCarForm() {
     const phone = document.getElementById('phone').value;
 
     // Ensure all required fields are filled
-    if (!carType || !capacity || !doors || !luggage || !transmission || !location || 
+    if ( !model ||!carType || !capacity || !doors || !luggage || !transmission || !location || 
         !price || !duration || !owner || !phone) {
         alert("Please fill in all required fields.");
         return false;
@@ -21,7 +22,7 @@ function validateEditCarForm() {
 
     // Ensure price is a positive number and at least 3 digits
     if (parseFloat(price) < 1000) {
-        alert("Price must be at least three digits.");
+        alert("Price must be at least four digits.");
         return false;
     }
 

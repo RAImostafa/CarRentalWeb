@@ -31,8 +31,8 @@ function validateForm() {
     }
 
     // Validate price (should be a positive number)
-    if (parseFloat(price) <= 0) {
-        alert("Price must be a positive number.");
+    if (parseFloat(price) <= 1000) {
+        alert("Price must more than three digits .");
         return;
     }
 

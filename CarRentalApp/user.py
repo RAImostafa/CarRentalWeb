@@ -67,7 +67,7 @@ class User:
         if not email.endswith('.com'):
             return "Email must end with '.com'", None
         if len(password) < 8 or ',' in password or not any(char.isalpha() for char in password):
-            return "Password must be at least 8 characters long, contain letters, and not contain commas.", None
+            return "Password must be at least 8 characters contain letter", None
 
         users = cls.get_list()
         for user in users:
@@ -142,7 +142,7 @@ class User:
             "luggage": form_data['bags'],
             "transmission": form_data['transmission'],
             "location": form_data['location'],
-            "price": str(price),  # Keep as a number and append "EGP" in the view
+            "price":str( price),  # Keep as a number and append "EGP" in the view
             "duration": form_data['duration'],
             "owner": form_data['renter_name'],
             "phone": form_data['renter_phone'],

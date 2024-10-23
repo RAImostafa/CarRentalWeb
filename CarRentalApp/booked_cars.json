@@ -28,28 +28,55 @@
     },
     {
         "user": {
-            "first_name": "Ziad ",
-            "last_name": "hesham ",
-            "email": "ziad_hesham1999@gmail.com",
-            "phone": "01140125119",
-            "government": "Dokki",
-            "password": "123456789QWER",
+            "first_name": "rania",
+            "last_name": "mustafa",
+            "email": "rania.mustafa1972@gmail.com",
+            "phone": "01150125119",
+            "government": "Maadi",
+            "password": "123456789asd",
             "role": "user"
         },
         "car": {
-            "image": "images/bmw_3series.jpg",
-            "model": "Nissan Ariya 2023",
+            "image": "images/ford_focus.jpg",
+            "model": "Ford Explorer 2024",
             "car_type": "SUV",
             "capacity": "5",
             "doors": "4",
             "luggage": "8",
             "transmission": "Automatic",
             "location": "Zamalik",
-            "price": "10000.0",
-            "duration": "week",
-            "owner": "basma aly",
-            "phone": "03566662",
-            "plate_number": "55522",
+            "price": "10000",
+            "duration": "month",
+            "owner": "Basma Aly",
+            "phone": "0356666236",
+            "plate_number": "45592",
+            "status": "booked"
+        }
+    },
+    {
+        "user": {
+            "first_name": "rania",
+            "last_name": "mustafa",
+            "email": "rania.mustafa1972@gmail.com",
+            "phone": "01150125119",
+            "government": "Maadi",
+            "password": "123456789asd",
+            "role": "user"
+        },
+        "car": {
+            "image": "images/audi_r8.jpg",
+            "model": "Audi R8",
+            "car_type": "Sedan",
+            "capacity": "5",
+            "doors": "4",
+            "luggage": "1",
+            "transmission": "Automatic",
+            "location": "Maadi",
+            "price": "90000",
+            "duration": "month",
+            "owner": "Sabry Ahmed",
+            "phone": "01140123116",
+            "plate_number": "25896",
             "status": "booked"
         }
     },
@@ -64,19 +91,19 @@
             "role": "user"
         },
         "car": {
-            "image": "images/Kia_Sportage.avif",
-            "model": "kia sportage",
-            "car_type": "EV",
-            "capacity": "5",
-            "doors": "4",
+            "image": "images/blue_MBW_M3CSL.jpg",
+            "model": "BMW M3 CSL gen7",
+            "car_type": " Coupe 3R",
+            "capacity": "4",
+            "doors": "2",
             "luggage": "1",
             "transmission": "Automatic",
-            "location": "Al-haram",
-            "price": "100003",
-            "duration": "week",
+            "location": "Mokkatam ",
+            "price": "100012",
+            "duration": "2 weeks",
             "owner": "basma aly",
             "phone": "01150125119",
-            "plate_number": "55520",
+            "plate_number": "55527",
             "status": "booked"
         }
     }

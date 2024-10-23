@@ -13,22 +13,19 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    align-items: right;
+    align-items: center; /* Center items horizontally */
     color: #007BFF;
     padding: 100px;
     margin-left: 50%;
+    margin-right: 25%;
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-filter: drop-shadow(0px 12px 24px rgba(16, 76, 139, 0.16));
-   
+    filter: drop-shadow(0px 12px 24px rgba(16, 76, 139, 0.16));
 }
 
-h1 {
-    margin-bottom: 20px;
+.signup-footer {
+    margin-top: 20px; /* Add space between the form and the footer */
     text-align: center;
-    color: #007BFF;
-    margin-top: 50px;
-    font-size: 3em;
 }
 
 form {
@@ -36,19 +33,19 @@ form {
     flex-direction: column;
     align-items: center;
     width: 300px;
-    background: rgba(255, 255, 255, 0.8); /* Light background for form */
+    background: rgba(255, 255, 255, 0.8); 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 input {
     margin: 10px 0;
     padding: 10px;
     width: 100%;
-    border: solid,1px;
-   /* border: solid;*/
     border-radius: 5px;
+    margin: 10px 0;
+    border: solid,1px;
 }
 
 button {
@@ -58,13 +55,11 @@ button {
     padding: 10px 20px;
     font-size: 1em;
     font-weight: bold;
-   
     border-radius: 5px;
     margin-top: 10px;
     cursor: pointer;
     width: 100%;
 }
-
 
 button:hover {
     background-color: #0056b3;
@@ -72,7 +67,6 @@ button:hover {
 
 a {
     color: #282848;
-    margin-top: 15px;
     text-decoration: none;
 }
 
@@ -87,3 +81,62 @@ a:hover {
     padding: 5px;
     border-radius: 3px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

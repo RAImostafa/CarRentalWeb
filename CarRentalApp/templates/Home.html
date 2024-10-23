@@ -49,7 +49,7 @@
                         </div>
                         <h3>{{ car.model }}</h3>
                         <p>Location: {{ car.location }}</p>
-                        <p>Price: <span class="price">{{ car.price }} EGP</span></p>
+                        <p>Price: <span class="price">{{ car.price if 'EGP' in car.price else car.price + ' EGP' }}</span></p>
                         <p><strong>Capacity: {{ car.capacity }}</strong></p>
                         {% if car.status == 'booked' %}
                         <span class="booked-flag">Booked</span>
@@ -72,7 +72,7 @@
                         </div>
                         <h3>{{ car.model }}</h3>
                         <p>Location: {{ car.location }}</p>
-                        <p>Price: <span class="price">{{ car.price }}</span></p>
+                        <p>Price: <span class="price">{{ car.price if 'EGP' in car.price else car.price + ' EGP' }}</span></p>
                         <p><strong>Capacity: {{ car.capacity }}</strong></p>
                         {% if car.status == 'booked' %}
                         <span class="booked-flag">Booked</span>
@@ -95,7 +95,7 @@
                         </div>
                         <h3>{{ car.model }}</h3>
                         <p>Location: {{ car.location }}</p>
-                        <p>Price: <span class="price">{{ car.price }}</span></p>
+                        <p>Price: <span class="price">{{ car.price if 'EGP' in car.price else car.price + ' EGP' }}</span></p>
                         <p><strong>Capacity: {{ car.capacity }}</strong></p>
                         {% if car.status == 'booked' %}
                         <span class="booked-flag">Booked</span>

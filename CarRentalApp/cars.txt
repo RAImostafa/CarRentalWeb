@@ -1,7 +1,6 @@
-images/chevrolet_aveo.jpg|Chevrolet Aveo|Economy|5|4|2|Automatic|7 El-Nozha|9000|week|Ahmed Mahmoud|0255956698|12345
 images/ford_focus.jpg|Ford Focus|Economy|5|4|2|Manual|Giza|4600|week|Amal Khaled|01087654321|20215
 images/GMC2017.jpg|GMC 2017|SUV|7|5|4|Automatic|Nozha|20000|week|Rania Mostafa|01150147789|22235
-images/mercedes-c-class-2015-hero.jpg|Mercedes C-Class 2015|Standard|5|4|1|Automatic|Maadi|10000|week|Rania Mostafa|789654123|12455
+images/mercedes-c-class-2015-hero.jpg|Mercedes C-Class 2014|Standard|5|4|1|Automatic|Maadi|10005|week|Rania Mostafa|789654123|12455
 images/fiat2023.jpg|Fiat 500|Hatchback|4|2|2|Automatic|Zamalik|20000|2 weeks|Marwan Aly|0145789644|14586
 images/Camry-Hybrid-Exterior_copy_1200x800-1170x780.jpg|Toyota Camry Hybrid 2022|Midsize Sedan|5|4|2|Automatic|West El Balad|6600|week|Marwan Mahmoud|01457896|25874
 images/Geely-Binrui-2.jpg|Geely Binrui|Sedan|5|4|1|Automatic|Faisal|20000|month|Sabry Ahmed|01140123116|12345
@@ -14,3 +13,8 @@ images/ford_focus.jpg|Ford Explorer 2024|SUV|5|4|8|Automatic|Zamalik|10000|month
 images/Nissan-Sunny.jpg|Nissan Ariya 2023|SUV|5|4|8|Automatic|Zamalik|10000|month|Basma Aly|03566662|55592
 images/bmw_3series.jpg|Nissan Ariya 2023|SUV|5|4|8|Automatic|Zamalik|10000|week|Basma Aly|03566662|55552
 images/Kia_Sportage.avif|Kia Sportage EV|EV|5|4|1|Automatic|Al-Haram|10000|week|Basma Aly|01150125119|55520
+images/Dodge_Ram_1500.jpg|Dodge Ram 2002|truck|4|2|1|Automatic|El-mohandesen|599998|month|basma aly|01150125119|55521
+images/2002_dodge.jpg|Dodge Ram 2002|truck|4|2|5|Automatic|Mokkatam |700000.0|month|basma aly|01150125119|55526
+images/blue_MBW_M3CSL.jpg|BMW M3 CSL gen7| Coupe 3R|4|2|1|Automatic|Mokkatam |100012|2 weeks|basma aly|01150125119|55527
+images/Camry-Hybrid-Exterior_copy_1200x800-1170x780.jpg|camry |sedan|5|4|2|Automatic|Mokkatam |10000.0|week|Mohamed abdelfata7|01150125115|55530
+images/bmw_3series.jpg|BMW M3 CSL gen5|SUV|5|4|2|Automatic|Mokkatam |10000.0|2 weeks|Mohamed abdelfata7|01150125115|55531
