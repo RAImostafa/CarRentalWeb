@@ -25,5 +25,32 @@
             "plate_number": "25896",
             "status": "booked"
         }
+    },
+    {
+        "user": {
+            "first_name": "rania",
+            "last_name": "mustafa",
+            "email": "rania.mustafa1972@gmail.com",
+            "phone": "01150125119",
+            "government": "Maadi",
+            "password": "asd123456789",
+            "role": "user"
+        },
+        "car": {
+            "image": "images/fiat2023.jpg",
+            "model": "Fiat 500 gen5",
+            "car_type": "Hatchback",
+            "capacity": "4",
+            "doors": "2",
+            "luggage": "2",
+            "transmission": "Automatic",
+            "location": "Zamalik",
+            "price": "20000",
+            "duration": "2 weeks",
+            "owner": "Marwan Aly",
+            "phone": "01457896445",
+            "plate_number": "14586",
+            "status": "booked"
+        }
     }
 ]

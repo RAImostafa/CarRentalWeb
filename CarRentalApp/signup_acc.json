@@ -21,5 +21,14 @@
         "government": "Maadi",
         "password": "123456789asd",
         "role": "user"
+    },
+    {
+        "first_name": "Aly",
+        "last_name": "mahmoud",
+        "email": "aly_mahmoud@gmail.com",
+        "phone": "01235458881",
+        "government": "nozha",
+        "password": "123456789asd",
+        "role": "user"
     }
 ]

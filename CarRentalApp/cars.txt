@@ -1,7 +1,6 @@
 images/ford_focus.jpg|Ford Focus|Economy|5|4|2|Manual|Giza|4600|week|Amal Khaled|01087654321|20215
-images/GMC2017.jpg|GMC 2017|SUV|7|5|4|Automatic|Nozha|20000|week|Rania Mostafa|01150147789|22235
 images/mercedes-c-class-2015-hero.jpg|Mercedes C-Class 2014|Standard|5|4|1|Automatic|Maadi|10005|week|Rania Mostafa|789654123|12455
-images/fiat2023.jpg|Fiat 500|Hatchback|4|2|2|Automatic|Zamalik|20000|2 weeks|Marwan Aly|0145789644|14586
+images/fiat2023.jpg|Fiat 500 gen5|Hatchback|4|2|2|Automatic|Zamalik|20000|2 weeks|Marwan Aly|01457896445|14586
 images/Camry-Hybrid-Exterior_copy_1200x800-1170x780.jpg|Toyota Camry Hybrid 2022|Midsize Sedan|5|4|2|Automatic|West El Balad|6600|week|Marwan Mahmoud|01457896|25874
 images/Geely-Binrui-2.jpg|Geely Binrui|Sedan|5|4|1|Automatic|Faisal|20000|month|Sabry Ahmed|01140123116|12345
 images/fiat_500_model.jpg|Fiat 500 Model|Sedan|5|4|1|Automatic|Faisal|20000|month|Sabry Ahmed|01140123116|14789
@@ -19,3 +18,4 @@ images/blue_MBW_M3CSL.jpg|BMW M3 CSL gen7| Coupe 3R|4|2|1|Automatic|Mokkatam |10
 images/Camry-Hybrid-Exterior_copy_1200x800-1170x780.jpg|camry |sedan|5|4|2|Automatic|Mokkatam |10000.0|week|Mohamed abdelfata7|01150125115|55530
 images/bmw_3series.jpg|BMW M3 CSL gen5|SUV|5|4|2|Automatic|Mokkatam |10000.0|2 weeks|Mohamed abdelfata7|01150125115|55531
 images/byd-seal-review-2023-001.webp|Byd seal 2023|seal|4|2|1|Automatic|Al haram |100000.0|2 weeks|Mohamed abdelfata7|01150125115|55539
+images/mg-zs.jpg|Mg SUV 2023|SUV|6|2|2|Automatic|Al haram |100000.0|week|Mohamed abdelfata7|01150125115|55540

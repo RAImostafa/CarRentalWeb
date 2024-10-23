@@ -34,12 +34,14 @@ Make sure you have the following:
                     Name of two properties: first_name, email
                     Name of two methods: sign_up(), sign_in()
                     File name and line numbers where the methods *are used*:
+
                     File name: carRental.py
-                    Line numbers for sign_up(): Line 20 (inside the /sign_up route).
-                    Line numbers for sign_in(): Line 38 (inside the /sign_in route).
+                    Line numbers for sign_up(): Line 19 (inside the /sign_up route).
+                    Line numbers for sign_in(): Line 37 (inside the /sign_in route).
+
                 2-For the Car class in *car.py*:
                     File name for the class definition: car.py
-                    Line number(s) for the class definition: Line 2
+                    Line number(s) for the class definition: Line 3
                     Name of two properties: model, car_type
                     Name of two methods: get_cars(), book_car(user, plate_number)
                     File name and line numbers where the methods are used:
@@ -56,26 +58,26 @@ Make sure you have the following:
 
 -[✔️] It makes use of the reading and writing to the same file feature.
                 cars.txt
-                1- in the admin can *ADD* a car by func add_car(form_data, file) at line 113 , in "user.py" 
-                2- cars can be *READ* through get_cars() at line 19 , in "car.py"
-                3-admin can *DELETE* a car too by func delete_car(plate_number_to_delete) at line 184 , in "user.py" 
+                1- in the admin can *ADD* a car by func add_car(form_data, file) at line 124 , in "user.py" 
+                2- cars can be *READ* through get_cars() at line 21 , in "car.py"
+                3-admin can *DELETE* a car too by func delete_car(plate_number_to_delete) at line 194 , in "user.py" 
                 4-admin can *EDIT* a car too by func edit_car(plate_number) at line 230 , in "carRental.py" 
 
 -[✔️] It contains conditional statements.
                  -file name : carRental.py
                  -lines:22,32,40,46,67,....
                  -file name : car.py
-                 -lines:22,30,31,43,....
+                 -lines:24,34,35,48,....
                  -file name : user.py
-                 -lines:55,68,72,76,82,103,...
+                 -lines:65,79,83,87,...
 
 -[✔️] It contains loops. Please provide below the file name and the line number(s) of at least one example of a loop in your code.
                  - File name:carRental.py
                  - Line number(s):72,82,87,102,110,...
                  - File name:user.py
-                 - Line number(s):55,77,81,107,143,...
+                 - Line number(s):64,92,87,112,152,...
                  - File name:car.py
-                 - Line number(s):22,32,43,73,...
+                 - Line number(s):24,25,34,48,81,...
 
 -[✔️] It lets the user enter a value in a text box at some point This value is received and processed by your back end Python code.
                 - used in Sign in and sign up fileds 
