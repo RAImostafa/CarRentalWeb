@@ -121,10 +121,10 @@ or experimental code. In particular, the code should not use print() or console.
 ![Admin Page Screenshot](screenshots/Admin%20page.png)
 
 ### Admin Add Car Page 
-![Admin Add Car Page Screenshot](screenshots/Add%20Car%20page.png)
+![Add Car Page Screenshot](screenshots/Add%20Car%20page.png)
 
 ### Admin Edit Car Details Page 
-![Admin Edit Car Page Screenshot](screenshots/Edit%20Car%20details%20page.png)
+![ Edit Car details page Screenshot](screenshots/Edit%20Car%20details%20page.png)
 
 ### Booked Cars Page 
-![Booked Cars Page Screenshot](screenshots/Booked%20Cars%20page.png)
+![Booked Cars page Screenshot](screenshots/Booked%20Cars%20page.png)
