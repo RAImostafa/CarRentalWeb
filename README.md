@@ -2,7 +2,7 @@
 It's a website that helps you to book cars with a huge variety of models and prices.
 
 ## What does it do?
-You can book a car or more and cancel the reservation. It also shows their prices and all the car and owner info. The admin can add new cars, remove cars, view the booked list, and cancel bookings.
+You can book a car or more and cancel the reservation. It also shows their prices and all the car and owner info. The admin can add new cars, remove cars, view the booked list, and cancel bookings , Edit on cars too.
 
 ## New Feature
 - A better user profile that contains the cars they booked.
